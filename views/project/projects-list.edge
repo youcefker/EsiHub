@@ -1,0 +1,141 @@
+<!doctype html>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/projectPost.css">
+    <link rel="stylesheet" href="/css/nav.css">
+    <title>{{pageTitle}} </title>
+</head>
+<body>
+    <!-- nav bar -->
+    <header>
+
+        <nav  class="navbar navbar-expand-lg navbar-dark    ">
+          <a class="navbar-brand " href="#">Navbar</a>
+          <button onclick="openNav()" id="menuphone" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div id="rolling_bar">
+                <input class="colortypingg" type="text" id="txxt"  placeholder="search developer or project">
+                  <a href="#" id="bbtn">
+                    <h3><strong>|</strong></h3><i class="fas fa-search"></i>
+                  </a>
+  
+            </div>
+  
+            <ul class="navbar-nav mr-auto">
+              <li id="margli" class="nav-item">
+              </li>
+            </ul>
+  
+            <ul id="margul1" class="navbar-nav mr-auto">
+              <li id="margli" class="nav-item active">
+                <a class="nav-link" href="/projects"><strong>Home</strong> <span class="sr-only">(current)</span></a>
+              </li>
+              <li id="margli" class="nav-item active">
+                <a class="nav-link" href="#"><strong>Messages</strong> <span class="sr-only">(current)</span></a>
+              </li>
+              <li id="margli" class="nav-item active">
+                <a class="nav-link" href="/notifications"><strong>Notifications</strong> <span class="sr-only">(current)</span></a>
+              </li>
+              <li id="margli" class="nav-item active">
+                <a class="nav-link" href="/me"><strong>Profile</strong> <span class="sr-only">(current)</span></a>
+              </li>
+            </ul>
+  
+            <ul id="margul2" class="navbar-nav mr-auto">
+  
+              <li id="margli2" class="nav-item">
+                <img class="nav-link" href="#" id="imgbuff" src="/img/icon_buffer-512.png" alt="icon_buffer-512.png">
+              </li>
+              <li id="margli22" class="nav-item">
+                <a class="nav-link" href="/search"><strong>projects &</br>developers</strong>  </a>
+              </li>
+  
+            </ul>
+  
+          </div>
+  
+        </nav>
+        <div id="mobile__menu" class="overlay">
+            <a class="close" onclick="closeNav()">&times;</a>
+            <div class="overlay__content">
+                <a href="#">home</a>
+                <a href="#">Messages</a>
+                <a href="/notifications">Notifications</a>
+                <a href="#">Profile</a>
+                <div id="rolling_bar">
+                  <input class="colortypingg" type="text" id="txxt"  placeholder="search developer or project">
+                  <a href="#" id="bbtn">
+                    <h3><strong>|</strong></h3><i class="fas fa-search"></i>
+                  </a>
+
+                </div>
+            </div>
+        </div>
+        </header>
+    <!-- end nav bar -->    
+    <div class="grid">
+    @each(project in projs)
+    <article class="card">
+        <div class="card-head">
+            <img src="img/profile.jpg">
+            <ul>
+                <li class="name">Ait Abdelkaoui karina</li>
+                <li class="type">{{project.projectType}} </li>
+            </ul>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col">
+                    <p class="title">{{project.title}} </p>
+                    <p>
+                       {{project.description}}
+                    </p>
+                </div>
+                <div class="col">
+                <img src="{{project.imagePath}}">
+                </div>
+            </div>
+        </div>
+        <div class="card-foot">
+           <ul class="right">
+               <li><button>Like</button></li>
+           <li><a href='/add-comment/{{project.id}}'>Comment</a></li>
+               <li class="ratting-wrapper">
+                   <input type="radio" name="rating" id="star-1"><label for="star-1"></label>
+                   <input type="radio" name="rating" id="star-2"><label for="star-2"></label>
+                   <input type="radio" name="rating" id="star-3"><label for="star-3"></label>
+                   <input type="radio" name="rating" id="star-4"><label for="star-4"></label>
+                   <input type="radio" name="rating" id="star-5"><label for="star-5"></label>
+               </li>
+           </ul>
+           <ul class="left">
+               <a href='/projects/{{project.id}}'>Details</a>
+           </ul>
+
+        </div>
+    </article>
+    @else 
+      <h2>No project found!</h2>
+    @endeach
+</div>
+   
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</body>
+</html>
