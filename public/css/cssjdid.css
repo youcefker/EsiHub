@@ -7,6 +7,10 @@ body {
     font-size: larger;
 }
 
+#inf{
+  text-align: center;
+}
+
 .bordred{
     border : 2px solid ;
     border-radius: 20px;
@@ -36,14 +40,7 @@ margin-left: 14%;
 margin-top: -4%
 
 }
-/*hnaya tae avatar (page2 tae inscription)*/
-.avatar{border-radius: 50%
-  width:300px ;
-  height: 300px;
-  background-image: url("img/image2.jpg");
-  background-size: cover;
 
-}
 
 #wrappere{
 margin: 0 auto;
@@ -76,14 +73,12 @@ top :-25px;
 
 }
 #tofsgh5{
-  margin-left: -90%;
-  margin-top: 0%;
+
   padding-bottom: : 5%;
   color:  #007FEB
 
 }#tofsgh6{
-  margin-left: -53%;
-  margin-top: -5%;
+
   padding-bottom: : 5%;
   color:  #007FEB
 
@@ -161,8 +156,7 @@ border: 0px solid #000000;
 
 
 
- #tofsghh{margin-left: -103%;
- margin-top: -7%;
+ #tofsghh{
  padding-bottom: : 5%;
 
 }
@@ -276,7 +270,6 @@ border: 0px solid #000000;
 
 #marginins{
   margin-left: 10%;
-
   text-decoration-color:#2699FB ;
   margin-top: 10%;
 
@@ -284,8 +277,7 @@ border: 0px solid #000000;
 
 
 
-#tofsgh{margin-left: -103%;
-margin-top: -2.5%;
+#tofsgh{
 padding-bottom: : 5%;
 
 
@@ -450,13 +442,7 @@ p.tt{color: #007FEB}
   position:relative;
   }
 
-.avatar{
-  width:fit-content;
-  position:relative;
-  margin-top: -35%;
-  margin-left: 58%;
 
-}
 
 .avatar-container{
   cursor:pointer;
@@ -476,11 +462,7 @@ p.tt{color: #007FEB}
   width:10rem;
   height:10rem;
 }
-#avatar-profil{
-right: 57%;
-top:80px;
 
-}
 #blah{
   opacity: 1;
   width: 113%;
@@ -514,6 +496,84 @@ border-color: red;
   opacity:0.5;
 }
 
+#spanmm5{
+
+
+
+}
+.avatar{
+  top: 5px;
+  margin: 0 auto;
+ width: 100px;
+
+}
 
 
 /* css tof de profil end*/
+
+
+
+   @media only screen and (max-width:   959px) {
+
+
+
+     #tofsgh5{
+
+       padding-bottom: : 5%;
+       color:  #007FEB;
+       left: -82px;
+
+     }
+
+
+     .modal-content {
+       border-radius: 14px 14px 14px 14px;
+     -moz-border-radius: 14px 14px 14px 14px;
+     -webkit-border-radius: 14px 14px 14px 14px;
+     border: 0px solid #000000;
+         background-color: #fefefe;
+         margin: 4% auto 15% auto;
+         margin-top: 70px;
+         border: 1px solid #888;
+         width: 100%;
+         height: 100%;
+       padding-bottom: 10px;
+     }
+
+     #inf{
+       text-align: center;
+          }
+
+     #av{
+       top: 0px;
+     }
+     #colortyping{
+       width: 60%;
+       text-align: center;
+     }
+     #cncl{
+      left: -52px;
+     }
+
+
+
+   }
+
+
+      @media only screen and (max-width:   769px) {
+        .avatar{
+          top: 5px;
+          margin: 0 auto;
+         width: 100px;
+
+        }
+    input[type=text], input[type=password],input[type=date],input[type=tel]{
+        font-size: 12px;
+      }
+
+      #ss{
+        margin: 0 auto;
+       width: 100px;
+      }
+
+      }
