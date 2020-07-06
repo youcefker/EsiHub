@@ -1,11 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
+  <head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- Bootstrap 4 link -->
+    <meta charset="utf-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
@@ -14,232 +11,347 @@
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
 
-    {{--  Static files  --}}
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/cssjdid.css">
-    <link rel="stylesheet" href="/css/swiper.min.css">
+{{--  Static files  --}}
 
-    <!-- Ubuntu font -->
-    <link rel="stylesheet" type="text/css"
-        href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
-    <script src="/js/scriipt.js"> </script>
-
-    <script src="https://code.jquery.com/jquery-3.4.1.js"
-        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="/css/bootstrap.min.css">
+      <link rel="stylesheet" href="/css/index.css">
+      <link rel="stylesheet" href="/css/swiper.min.css">
+        <link rel="stylesheet" href="/css/slideee.css">
+    <title></title>
 
 
-    <title>Document</title>
-
-</head>
-
-<body>
-    <div class="bord">
-        <div id="bbord" class="card m-sm-3 m-md-4 m-lg-5">
-            <div></div>
-            <header>
-
-                <div class="container">
-                    <!-- navbar  -->
-                    <div class="navbar navbar-expand-md">
-                        <div class="navbar-brand">logoHere</div>
-
-                        <!-- togglerButton -->
-                        <button class="navbar-toggler" type="button" data-toggle="modal" data-target="#ahay">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-
-                        <!-- navbarButtons -->
-                        <div class="collapse navbar-collapse  justify-content-end" id="smallDevice">
-                            <ul class="navbar-nav">
-                                {{--  Login  --}}
-                                <li class="nad-item ">
-                                    <a class="btn btn-light text-primary " style="border-radius: 20px;"
-                                        onclick="document.getElementById('modal-wrapper2').style.display='block'"
-                                        data-toggle="modal"
-                                        data-target="#login">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Log
-                                        In&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></button>
-                                </li>
-                                {{--  Sign in  --}}
-                                <li class="nad-item ml-2">
-                                    <a onclick="document.getElementById('modal-wrapper').style.display='block'"
-                                        class="btn btn-light bordred border-primary text-primary "
-                                        data-toggle="modal"
-                                        data-target="#signin">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sign
-                                        Up&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </header>
-                {{--  See more  --}}
-                <div class="container mt-5">
-                    <div class="row mt-4">
-                        <div id="ttop" class="col-md-6 marginTop">
-                            <h2><strong>Share you problems ,</strong></h2>
-                            <h2><strong>your projects .</strong></h2>
-                            <h2><strong>Hey you can invest too ;) </strong></h2></br>
-                            <p id="jj">Lorem ipsum dolo quam accusamus sapienteur adipisicing elit.sd dskdjskdjsd</br>
-                                ksd jksd ks jksd jsk ksdjksdk sdjsk d ita eligendd dskdjskdjsd ksd jksd ks jksd jsk
-                                ksdjksdk sdjsk d ita eligendi tempore d in ipsa esse tenetur libero, fuga architecto.
-                            </p>
-                            <button id="see"
-                                    class="w-600 btn btn-primary bordred size"
-                                    data-toggle="modal"
-                                    data-target="#seeMore">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;See
-                                more&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-                        </div>
-
-                        <div class="col-md-5 mt-5">
-                            <div class="tof">
-                                <div id="roww" class='row'>
-                                    <div class='col -6'>
-                                         <img id="immg1"
-                                                src="/img/image3.jpg"
-                                                alt="esiHub"
-                                                height=90%
-                                                width=90%>
-                                    </div>
-                                </div>
-
-                                <div id="roww" class="row justify-content-center">
-                                    <div class='col -6'>
-                                         <img id="immg2"
-                                                src="/img/image2.jpg"
-                                                alt="esiHub"
-                                                height=100%
-                                                width=110%>
-                                    </div>
-                                    <div class='col -3'>
-                                        <img id="immg3"
-                                                src="/img/image1.jpg"
-                                                alt="esiHub"
-                                                height=100%
-                                                width=80%>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div id="btnn" class='row'>
-
-                        </br></br></br></br></br></br>
-
-                        <div class="swiper-container">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div id="hih" class="card">
-                                        <div class="sliderText">
-                                            <img src="/images/web-front/web-3.jpg" class="card-img-top" alt="...">
-                                        </div>
-                                        <div class="content">
-                                            <div class="hh">
-                                                <h5 class="card-title"> APP WEB</h5>
-                                            </div>
-                                            <p class="pp">jlshdhask djkhfdhfosdf sdjkfhsdhfjksdf dfksddkfhsfh </p>
-                                            <a href="#" class="btn btn-primary">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; View
-                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="swiper-slide">
-                                    <div id="hih" class="card">
-                                        <div class="sliderText">
-                                            <img src="/img/90546809_3528173197257748_4889041855213207552_n.jpg"
-                                                class="card-img-top" alt="...">
-                                        </div>
-                                        <div class="content">
-                                            <div class="hh">
-                                                <h5 class="card-title"> artificial intellegence</h5>
-                                            </div>
-                                            <p class="pp">jlshdhask djkhfdhfosdf sdjkfhsdhfjksdf dfksddkfhsfh
-                                                jedfhjkwehfj voffjhvjk onloadedmetadataerfjrfhjkdfjkv rfjkfkfhk</p>
-                                            <a href="#" class="btn btn-primary">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; View
-                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="swiper-slide">
-                                    <div id="hih" class="card">
-                                        <div class="sliderText">
-                                            <img src="/img/90520490_1322635767932215_9211350187170070528_n.jpg"
-                                                class="card-img-top" alt="...">
-                                        </div>
-                                        <div class="content">
-                                            <div class="hh">
-                                                <h5 class="card-title"> APP WEB</h5>
-                                            </div>
-                                            <p class="pp">jlshdhask djkhfdhfosdf sdjkfhsdhfjksdf dfksddkfhsfh
-                                                jwdfnjksdhjkv do vhid yvuihcui vguic gvic vicgvicgv </p>
-                                            <a href="#" class="btn btn-primary">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; View
-                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="swiper-slide">
-                                    <div id="hih" class="card">
-                                        <div class="sliderText">
-                                            <img src="/img/90480347_541612719795861_6369447546623885312_n.jpg"
-                                                class="card-img-top" alt="...">
-                                        </div>
-                                        <div class="content">
-                                            <div class="hh">
-                                                <h5 class="card-title"> APPLICATION </br> MOBILE</h5>
-                                            </div>
-                                            <p class="pp">jlshdhask djkhfdhfosdf sdjkfhsdhfjksdf dmmmmmmmmmmvk k kkkk
-                                                s8ysy fmldjfl jdflk jl jlk jlkj kljfksddkfhsfh </p>
-                                            <a href="#" class="btn btn-primary">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; View
-                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </a>
-                                        </div>
-                                    </div>
-                                </div>
+  </head>
 
 
 
+  <body>
+
+    <header>
 
 
-
-
-                                <div class="swiper-slide">
-                                    <div id="hih" class="card">
-                                        <div class="sliderText">
-                                            <img src="/images/web-front/web-3.jpg" class="card-img-top" alt="...">
-                                        </div>
-                                        <div class="content">
-                                            <div class="hh">
-                                                <h5 class="card-title"> APP WEB</h5>
-                                            </div>
-                                            <p class="pp">jlshdhask djkhfdhfosdf sdjkfhsdhfjksdf dfksddkjksjd iuduis
-                                                ydius ydui ysuid ysuiydiysidyuisyuiysuiyd yusy fhsfh </p>
-                                            <a href="#" class="btn btn-primary">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; View
-                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div id="txtc" class='row '>
-                            <div class="col ">
-                                <p class="tt"><strong><i><u>PROJECTS & SOLUTIONS</u></i></strong></p>
-                            </div>
-                        </div>
-
-
-
-
-
-
-                    </div>
-
-                </div>
-            </main>
-        </div>
+      <div class="container">
+  <div id="navmarg" class="row">
+    <div class="col-8">
+    <div class="navbar-brand">logoHere</div>
     </div>
+    <div class="col-lg-4">
+      <div id="log" class="row">
+    <div class="col-6">
+       {{--  Login  --}}
+          <a  class="btn btn-light text-primary " style="border-radius: 20px;"
+              onclick="document.getElementById('modal-wrapper2').style.display='block'"
+              data-toggle="modal"
+              data-target="#login">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LogIn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></button>
+
+    </div>
+    <div class="col-6">
+        {{--  Sign in  --}}
+          <a onclick="document.getElementById('modal-wrapper').style.display='block'"
+              class="btn btn-light bordred border-primary text-primary "
+              data-toggle="modal"
+              data-target="#signin">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SignUp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+
+    </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </header>
+
+
+
+
+
+
+
+
+        {{--  See more  --}}
+        <div class="container mt-5">
+            <div class="row mt-4">
+                <div id="ttop" class="col-md-6 marginTop">
+                    <h2><strong>Share you problems ,</strong></h2>
+                    <h2><strong>your projects .</strong></h2>
+                    <h2><strong>Hey you can invest too ;) </strong></h2></br>
+                    <p id="jj">Lorem ipsum dolo quam accusamus sapienteur adipisicing elit.sd dskdjskdjsd</br>
+                        ksd jksd ks jksd jsk ksdjksdk sdjsk d ita eligendd dskdjskdjsd ksd jksd ks jksd jsk
+                        ksdjksdk sdjsk d ita eligendi tempore d in ipsa esse tenetur libero, fuga architecto.
+                    </p>
+                    <button id="see"
+                            class="w-600 btn btn-primary bordred size"
+                            data-toggle="modal"
+                            data-target="#seeMore">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;See
+                        more&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+                </div>
+
+                <div class="col-md-5 mt-5">
+                    <div class="tof">
+                        <div id="roww" class='row'>
+                            <div class='col -6'>
+                                 <img id="immg1"
+                                        src="/img/image3.jpg"
+                                        alt="esiHub"
+                                        height=90%
+                                        width=90%>
+                            </div>
+                        </div>
+
+                        <div id="roww" class="row justify-content-center">
+                            <div class='col -6'>
+                                 <img id="immg2"
+                                        src="/img/image2.jpg"
+                                        alt="esiHub"
+                                        height=100%
+                                        width=110%>
+                            </div>
+                            <div class='col -3'>
+                                <img id="immg3"
+                                        src="/img/image1.jpg"
+                                        alt="esiHub"
+                                        height=100%
+                                        width=80%>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="btnn" class='row'>
+
+                </br></br></br></br></br></br>
+
+                <div class="swiper-container swiper-init" data-initial-slide="1">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div id="hih" class="card">
+                                <div class="sliderText">
+                                    <img src="/images/web-front/web-3.jpg" class="card-img-top" alt="...">
+                                </div>
+                                <div class="content">
+                                    <div class="hh">
+                                        <h5 class="card-title"> APP WEB</h5>
+                                    </div>
+                                    <p class="pp">jlshdhask djkhfdhfosdf sdjkfhsdhfjksdf dfksddkfhsfh </p>
+                                    <a href="#" class="btn btn-primary">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; View
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div id="hih" class="card">
+                                <div class="sliderText">
+                                    <img src="/img/90546809_3528173197257748_4889041855213207552_n.jpg"
+                                        class="card-img-top" alt="...">
+                                </div>
+                                <div class="content">
+                                    <div class="hh">
+                                        <h5 class="card-title"> artificial intellegence</h5>
+                                    </div>
+                                    <p class="pp">jlshdhask djkhfdhfosdf sdjkfhsdhfjksdf dfksddkfhsfh
+                                        jedfhjkwehfj voffjhvjk onloadedmetadataerfjrfhjkdfjkv rfjkfkfhk</p>
+                                    <a href="#" class="btn btn-primary">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; View
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div id="hih" class="card">
+                                <div class="sliderText">
+                                    <img src="/img/90520490_1322635767932215_9211350187170070528_n.jpg"
+                                        class="card-img-top" alt="...">
+                                </div>
+                                <div class="content">
+                                    <div class="hh">
+                                        <h5 class="card-title"> APP WEB</h5>
+                                    </div>
+                                    <p class="pp">jlshdhask djkhfdhfosdf sdjkfhsdhfjksdf dfksddkfhsfh
+                                        jwdfnjksdhjkv do vhid yvuihcui vguic gvic vicgvicgv </p>
+                                    <a href="#" class="btn btn-primary">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; View
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div id="hih" class="card">
+                                <div class="sliderText">
+                                    <img src="/img/90480347_541612719795861_6369447546623885312_n.jpg"
+                                        class="card-img-top" alt="...">
+                                </div>
+                                <div class="content">
+                                    <div class="hh">
+                                        <h5 class="card-title"> APPLICATION </br> MOBILE</h5>
+                                    </div>
+                                    <p class="pp">jlshdhask djkhfdhfosdf sdjkfhsdhfjksdf dmmmmmmmmmmvk k kkkk
+                                        s8ysy fmldjfl jdflk jl jlk jlkj kljfksddkfhsfh </p>
+                                    <a href="#" class="btn btn-primary">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; View
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </a>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+                        <div class="swiper-slide">
+                            <div id="hih" class="card">
+                                <div class="sliderText">
+                                    <img src="/images/web-front/web-3.jpg" class="card-img-top" alt="...">
+                                </div>
+                                <div class="content">
+                                    <div class="hh">
+                                        <h5 class="card-title"> APP WEB</h5>
+                                    </div>
+                                    <p class="pp">jlshdhask djkhfdhfosdf sdjkfhsdhfjksdf dfksddkjksjd iuduis
+                                        ydius ydui ysuid ysuiydiysidyuisyuiysuiyd yusy fhsfh </p>
+                                    <a href="#" class="btn btn-primary">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; View
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="txtc" class='row '>
+                    <div class="col ">
+                        <p class="tt"><strong><i><u>PROJECTS & SOLUTIONS</u></i></strong></p>
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="card-carousel">
+                  <div class="my-card">
+                    <div id="cardido" class="card" style="width: 18rem;">
+                      <!-- Avatar -->
+                      <div class="avatar mx-auto white">
+                        <img id="imgo" src="https://mdbootstrap.com/img/Photos/Avatars/img%20%2810%29.jpg" class="rounded-circle"
+                          alt="woman avatar">
+                      </div>
+                      <div class="card-body ">
+                        <div class="card-block text-center">
+                          <h5 class="card-title ">Samy Belambri</h5>
+                          <p class="card-text">descriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescription.</p>
+                          <a type="button" class="btn btn-light">view profil</a>
+                        </div>
+
+                      </div>
+                    </div>
+
+                  </div>
+
+
+                  <div class="my-card">
+                    <div id="cardido" class="card" style="width: 18rem;">
+                      <!-- Avatar -->
+                      <div class="avatar mx-auto white">
+                        <img id="imgo" src="https://mdbootstrap.com/img/Photos/Avatars/img%20%2810%29.jpg" class="rounded-circle"
+                          alt="woman avatar">
+                      </div>
+                      <div class="card-body ">
+                        <div class="card-block text-center">
+                          <h5 class="card-title ">Samy Belambri</h5>
+                          <p class="card-text">descriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescription.</p>
+                          <a type="button" class="btn btn-light">view profil</a>
+                        </div>
+
+                      </div>
+                    </div>
+
+                  </div>
+
+
+                  <div class="my-card">
+                    <div id="cardido" class="card" style="width: 18rem;">
+                      <!-- Avatar -->
+                      <div class="avatar mx-auto white">
+                        <img id="imgo" src="https://mdbootstrap.com/img/Photos/Avatars/img%20%2810%29.jpg" class="rounded-circle"
+                          alt="woman avatar">
+                      </div>
+                      <div class="card-body ">
+                        <div class="card-block text-center">
+                          <h5 class="card-title ">Samy Belambri</h5>
+                          <p class="card-text">descriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescription.</p>
+                          <a type="button" class="btn btn-light">view profil</a>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="my-card">
+                    <div id="cardido" class="card" style="width: 18rem;">
+                      <!-- Avatar -->
+                      <div class="avatar mx-auto white">
+                        <img id="imgo" src="https://mdbootstrap.com/img/Photos/Avatars/img%20%2810%29.jpg" class="rounded-circle"
+                          alt="woman avatar">
+                      </div>
+                      <div class="card-body ">
+                        <div class="card-block text-center">
+                          <h5 class="card-title ">Samy Belambri</h5>
+                          <p class="card-text">descriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescription.</p>
+                          <a type="button" class="btn btn-light">view profil</a>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="my-card">
+                    <div id="cardido" class="card" style="width: 18rem;">
+                      <!-- Avatar -->
+                      <div class="avatar mx-auto white">
+                        <img id="imgo" src="https://mdbootstrap.com/img/Photos/Avatars/img%20%2810%29.jpg" class="rounded-circle"
+                          alt="woman avatar">
+                      </div>
+                      <div class="card-body ">
+                        <div class="card-block text-center">
+                          <h5 class="card-title ">Samy Belambri</h5>
+                          <p class="card-text">descriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescription.</p>
+                          <a type="button" class="btn btn-light">view profil</a>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+
+
+                <div id="txtc" class='row '>
+                    <div class="col ">
+                        <p class="tt"><strong><i><u>ESI DEVELOPPERS</u></i></strong></p>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     {{--  Sign In modal   --}}
@@ -249,180 +361,257 @@
     <div id="modal-wrapper"   class="modal">
     @endif
 
-        <form class="modal-content animate" action="/auth/register" method="POST">
-            <div class="imgcontainer">
-                <span onclick="document.getElementById('modal-wrapper').style.display='none'" class="close"
-                        title="Close PopUp">&times;</span>
+            <form class="modal-content animate" action="/auth/register" method="POST">
+
+                    @each(error in errors )
+                    <h3>{{error.msg}}</h3>
+                    @endeach
+
+                    <div id="marginins" class="container">
+
+                        <div class="row justify-content-center ">
+                            <div id="tofsgh1" class="col ">
+                                <span><i class="fas fa-user"></i></span>
+                            </div>
+                            <div id="tofsgh" class="col -6">
+                                <input id="colortyping" type="text" placeholder=" Enter Username" name="username">
+                            </div>
+
+                        </div>
+
+
+
+
+                        <div class="row justify-content-center ">
+                            <div id="tofsgh1" class="col ">
+                                <span><i class="fas fa-lock"></i></span>
+                            </div>
+                            <div id="tofsgh" class="col -6">
+                                <input id="colortyping" type="password" placeholder="Enter Password" name="password">
+                            </div>
+                        </div>
+
+
+                        <div class="row justify-content-center">
+                            <div id="tofsgh1" class="col ">
+                                <span><i class="fas fa-lock"></i></span>
+                            </div>
+                            <div id="tofsgh" class="col -6">
+                                <input id="colortyping" type="password" placeholder="Enter Password" name="passwordConf">
+                            </div>
+                        </div>
+
+                        <div class="row justify-content-center">
+                            <div id="tofsgh1" class="col ">
+                                <span><i
+                                        class="fa fa-envelope"></i></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;
+                                <span><i class="fa fa-exclamation-circle"></i></span>
+                            </div>
+                            <div id="tofsgh" class="col -6">
+                                <input id="colortyping" type="text"
+                                    placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@esi-sba.dz"
+                                    name="email">
+
+                            </div>
+
+                        </div>
+
+                            <button id="btnmm" class=" w-600 btn btn-primary bordred size"
+                            type="submit">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Next&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+                    </div>
+
+                </form>
+
             </div>
 
-                @each(error in errors )
-                <h1>{{error.msg}}</h1>
-                @endeach
-
-                <div id="marginins" class="container">
-
-                    <div class="row -4 ">
-                        <div id="tofsgh1" class="col ">
-                            <span><i class="fas fa-user"></i></span>
-                        </div>
-                        <div id="tofsgh" class="col -6">
-                            <input id="colortyping" type="text" placeholder=" Enter Username" name="username">
-                        </div>
-
-                    </div>
 
 
 
 
-                    <div class="row -4 ">
-                        <div id="tofsgh1" class="col ">
-                            <span><i class="fas fa-lock"></i></span>
-                        </div>
-                        <div id="tofsgh" class="col -6">
-                            <input id="colortyping" type="password" placeholder="Enter Password" name="password">
-                        </div>
-                    </div>
 
 
-                    <div class="row -4 ">
-                        <div id="tofsgh1" class="col ">
-                            <span><i class="fas fa-lock"></i></span>
-                        </div>
-                        <div id="tofsgh" class="col -6">
-                            <input id="colortyping" type="password" placeholder="Enter Password" name="passwordConf">
-                        </div>
-                    </div>
 
-                    <div class="row -4 ">
-                        <div id="tofsgh1" class="col ">
-                            <span><i
-                                    class="fa fa-envelope"></i></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;
-                            <span><i class="fa fa-exclamation-circle"></i></span>
-                        </div>
-                        <div id="tofsgh" class="col -6">
-                            <input id="colortyping" type="text"
-                                placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@esi-sba.dz"
-                                name="email">
 
-                        </div>
 
-                    </div>
 
-                        <button id="btnmm" class=" w-600 btn btn-primary bordred size"
-                        type="submit">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Next&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-                </div>
 
-            </form>
 
-        </div>
+
 
 
     {{--  Log In modal  --}}
-    @if(error.length>0)
-    <div id="modal-wrapper2" style="display:block;" class="modal">
-    @else
-    <div id="modal-wrapper2"   class="modal">
-    @endif
-        <div id="modal-wrapper3">
-        <form class="modal-content animate" action="/auth/login" method="POST">
-            <div class="imgcontainer">
-                <span onclick="document.getElementById('modal-wrapper2').style.display='none'"  ></span>
-            </div>
-            <div id="margininss" class="container">
-                @if(error)
-                <div>{{error}}</div>
-                @endif
-                <div class="row -4 ">
-                <div  class="col ">
-                <span   ><i class="fa fa-user"></i></span>
-                <span id="spann" ><i class="fa fa-exclamation-circle"></i></span>
-                </div>
-                <div id="tofsghh" class="col -6">
-                <input id="colortyping1" type="text" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@esi-sba.dz" name="email">
-            </div>
-            </div>
-                <div class="row -4 ">
-                <div  class="col ">
-                    <span  ><i class="fas fa-lock"></i></span>
+      @if(error.length>0)
+      <div id="modal-wrapper2" style="display:block;" class="modal">
+      @else
+        <div id="modal-wrapper2"   class="modal" aria-hidden="true" data-backdrop="true" >
+            @endif
+            <form class="modal-content animate" action="/auth/login" method="POST">
+
+                <div id="margininss" class="container">
+                  <button id="cloose" type="button" class="close" data-dismiss="modal" aria-label="Close"  onclick="myFunction()">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                    @if(error)
+                    <div>{{error}}</div>
+                    @endif
+
+                    <div id="mrg" class="row -4 ">
+                    <div  class="col ">
+                    <span   ><i class="fa fa-user"></i></span>
                     <span id="spann" ><i class="fa fa-exclamation-circle"></i></span>
-                </div>
+                    </div>
                     <div id="tofsghh" class="col -6">
-                    <input id="colortyping1" type="password" placeholder="Password" name="password">
-            </div>
-            </div>
-                <button id="btnn2" class="w-600 btn btn-primary bordred size" type="submit">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;log in&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-                <div class="arrow-up"></div>
-        </form>
-    </div>
+                    <input id="colortyping1" type="text" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@esi-sba.dz" name="email">
+                    </div>
+                    </div>
 
-</body>
-
-
-
-
-
-
-
-
-        <script src="/js/swiper.min.js"></script>
-        <script>
-            function call(){
-            $.ajax({url: "localhost:3000/data",method : 'GET', success: function(result){
-                console.log(result)
-            }});
-          };
-
-            var swiper = new Swiper('.swiper-container', {
-                effect: 'coverflow',
-                grabCursor: true,
-                centeredSlides: true,
-                slidesPerView: 'auto',
-                coverflowEffect: {
-                    rotate: 0,
-                    stretch: 900,
-                    depth: 600,
-                    modifier: 1,
-                    slideShadows: false,
-                },
-                pagination: {
-                    el: '.swiper-pagination',
-                },
-            });
-
-            $('#btnn').hide();
-
-            $(document).ready(function () {
-                $('#see').click(function () {
-                    $('#btnn').show();
-                    $('#see').hide();
-
-                });
-            });
-
-            var modal = document.getElementById('modal-wrapper');
-            window.onclick = function (event) {
-                if (event.target == modal) {
-                    modal.style.display = "none";
-                }
-            }
-        </script>
-
-
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-            crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-            crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-            crossorigin="anonymous"></script>
+                    <div class="row -4 ">
+                    <div  class="col ">
+                        <span  ><i class="fas fa-lock"></i></span>
+                        <span id="spann" ><i class="fa fa-exclamation-circle"></i></span>
+                    </div>
+                        <div id="tofsghh" class="col -6">
+                        <input id="colortyping1" type="password" placeholder="Password" name="password">
+                        </div>
+                   </div>
+                     <div class="row justify-content-center">
+                    <button  class="w-600 btn btn-primary bordred size" type="submit">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;log in&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+                     </div>
+                    <div id="flesh" class="arrow-up"></div>
+                </div>
+            </form>
+        </div>
 
 
 
-<!-- Bootstarp jQuery Script -->
-<script src="/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
-<!-- jQuery  -->
-<script src="/node_modules/jquery/dist/jquery.js"></script>
+
+
+
+
+            <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+                integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+                crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+                integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+                crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+                integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+                crossorigin="anonymous"></script>
+
+
+
+                <!-- Bootstarp jQuery Script -->
+                <script src="/js/bootstrap.min.js"></script>
+                <!-- jQuery  -->
+                <script src="/js/jquery.js"></script>
+                    <script src="/js/swiper.min.js"></script>
+
+
+
+                            <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>
+                            <script>
+                            $num = $('.my-card').length;
+                            $even = $num / 2;
+                            $odd = ($num + 1) / 2;
+
+                            if ($num % 2 == 0) {
+                              $('.my-card:nth-child(' + $even + ')').addClass('active');
+                              $('.my-card:nth-child(' + $even + ')').prev().addClass('prev');
+                              $('.my-card:nth-child(' + $even + ')').next().addClass('next');
+                            } else {
+                              $('.my-card:nth-child(' + $odd + ')').addClass('active');
+                              $('.my-card:nth-child(' + $odd + ')').prev().addClass('prev');
+                              $('.my-card:nth-child(' + $odd + ')').next().addClass('next');
+                            }
+
+                            $('.my-card').click(function() {
+                              $slide = $('.active').width();
+                              console.log($('.active').position().left);
+
+                              if ($(this).hasClass('next')) {
+                                $('.card-carousel').stop(false, true).animate({left: '-=' + $slide});
+                              } else if ($(this).hasClass('prev')) {
+                                $('.card-carousel').stop(false, true).animate({left: '+=' + $slide});
+                              }
+
+                              $(this).removeClass('prev next');
+                              $(this).siblings().removeClass('prev active next');
+
+                              $(this).addClass('active');
+                              $(this).prev().addClass('prev');
+                              $(this).next().addClass('next');
+                            });
+
+
+
+                            </script>
+
+
+
+    <script>
+        function call(){
+        $.ajax({url: "localhost:3000/data",method : 'GET', success: function(result){
+            console.log(result)
+        }});
+      };
+
+
+
+
+                        var swiper = new Swiper('.swiper-container', {
+                            effect: 'coverflow',
+                            grabCursor: true,
+                            centeredSlides: true,
+                            slidesPerView: 'auto',
+                            coverflowEffect: {
+                                rotate: 0,
+                                stretch: 900,
+                                depth: 600,
+                                modifier: 1,
+                                slideShadows: false,
+                            },
+                            pagination: {
+                                el: '.swiper-pagination',
+                            },
+                        });
+
+                        $('#btnn').hide();
+
+                        $(document).ready(function () {
+                            $('#see').click(function () {
+                                $('#btnn').show();
+                                $('#see').hide();
+
+                            });
+                        });
+
+
+
+
+        function myFunction() {
+  document.getElementById("modal-wrapper2").style.display = "none";
+}
+
+
+var modal = document.getElementById('modal-wrapper');
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+
+
+
+
+
+    </script>
+
+    <!-- Bootstarp jQuery Script -->
+    <script src="/bootstrap.min.js"></script>
+    <!-- jQuery  -->
+    <script src="/jquery.js"></script>
+  </body>
+
 
 </html>
