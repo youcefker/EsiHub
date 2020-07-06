@@ -7,6 +7,7 @@ const Notification = require('../models/Notification')
 const { param } = require('jquery')
 const { session } = require('passport')
 const { getEditProject } = require('./project')
+const { DATE } = require('sequelize/types')
 
 exports.getNotify = (req, res, next) => {
     let userNotifications = []
@@ -73,4 +74,53 @@ exports.postAddComment = (req, res, next) => {
         console.log(err)
     })
    
+}
+
+exports.addLike = (req, res, next) => {
+    const projectId = req.params.projectId 
+    console.log(projectId)
+    Project.findByPk(projectId)
+    .then(project => {
+        return  Project.update({likesNumber: project.likesNumber + 1}, { where: {id: projectId}, individualHooks: true})
+        .then(result => {
+            console.log(result)
+            return project.createNotification({
+                content: '',
+                type: 'like',
+                notifierId:req.session._id,
+                date: new Date()
+            }).then(result => {
+                console.log('like added successfully')
+                res.status(200).json({message: "project updated successfully!"})
+            })
+            
+        })
+    })
+    .catch(err => {
+        res.status(500).json({message: "something went wrong."})
+    })
+}
+
+exports.addRating = (req, res, next) => {
+    const projectId = req.params.projectId
+    const ratingValue = int(req.body.ratingValue)
+    console.log(ratingValue)
+    Project.findByPk(projectId)
+    .then(project => {
+        return Project.update({rating: project.rating + ratingValue/(project.numberOfRaters + 1) }, { where: {id: projectId}, individualHooks: true})
+        .then(result => {
+            return project.createNotification({
+                content: ratingValue + 'stars',
+                type: 'rating',
+                notifierId: req.session._id,
+                date: new Date()
+            })
+            .then(result => {
+                res.status(200).json({message: "project updated successfully!"})
+            })
+        })
+    })
+    .catch(err => {
+        res.status(500).json({message: "something went wrong."})
+    })
 }

@@ -151,12 +151,17 @@ app.get('/search', searchController.getSearch)
 
 app.post('/searchProject', searchController.postSearch)
 
+//Notifications
+
 app.get('/notifications', notificationController.getNotify)
 
 app.get('/add-comment/:projectId', notificationController.getAddComment)
 
 app.post('/add-comment', notificationController.postAddComment)
 
+app.post('/add-like/:projectId', notificationController.addLike)
+
+app.post('/add-rating/:projectId', notificationController.addRating)
 
 
 

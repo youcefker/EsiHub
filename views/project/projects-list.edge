@@ -106,15 +106,16 @@
             </div>
         </div>
         <div class="card-foot">
+        <input type="hidden" name="projectId" value="{{project.id}}">
            <ul class="right">
-               <li><button>Like</button></li>
+               <li><button onclick="addLike(this)">Like</button></li>
            <li><a href='/add-comment/{{project.id}}'>Comment</a></li>
                <li class="ratting-wrapper">
-                   <input type="radio" name="rating" id="star-1"><label for="star-1"></label>
-                   <input type="radio" name="rating" id="star-2"><label for="star-2"></label>
-                   <input type="radio" name="rating" id="star-3"><label for="star-3"></label>
-                   <input type="radio" name="rating" id="star-4"><label for="star-4"></label>
-                   <input type="radio" name="rating" id="star-5"><label for="star-5"></label>
+                   <input type="radio" name="rating" id="star-1" value="1" onclick="addRating()"><label for="star-1"></label>
+                   <input type="radio" name="rating" id="star-2" value="2" onclick="addRating()"><label for="star-2"></label>
+                   <input type="radio" name="rating" id="star-3" value="3" onclick="addRating()"><label for="star-3"></label>
+                   <input type="radio" name="rating" id="star-4" value="4" onclick="addRating()"><label for="star-4"></label>
+                   <input type="radio" name="rating" id="star-5" value="5" onclick="addRating()"><label for="star-5"></label>
                </li>
            </ul>
            <ul class="left">
@@ -136,6 +137,7 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="/js/async.js"></script>
 
 </body>
 </html>

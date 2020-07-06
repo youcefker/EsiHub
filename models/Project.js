@@ -24,6 +24,15 @@ const Project = sequelize.define('project', {
     filespath: {
         type: Sequelize.STRING
     },
+    likesNumber: {
+        type: Sequelize.INTEGER
+    },
+    rating: {
+        type: Sequelize.DECIMAL
+    },
+    numberOfRaters: {
+        type: Sequelize.INTEGER
+    }
     
 });
 

@@ -29,7 +29,8 @@ exports.postAddProject = (req, res, next) => {
           project: {
             title: title,
             projectType: projectType,
-            description: description
+            description: description,
+            likesNumber: 0
           },
           errorMessage: 'Attached file is not an image.',
           validationErrors: []
@@ -66,7 +67,10 @@ exports.postAddProject = (req, res, next) => {
         title: title,
         projectType: projectType,
         description: description,
-        imagePath: imageUrl
+        imagePath: imageUrl,
+        likesNumber:0,
+        rating: 0,
+        numberOfRaters: 0
     })
     .then(result => {
         console.log('project created successfully')
