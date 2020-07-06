@@ -40,7 +40,7 @@ img {
         }
         #pubbb{
           position: absolute;
-          right: 10px;
+          right: -100px;
         }
 
 #blah2{
@@ -115,7 +115,8 @@ img {
         }
 body{background-color: #E9EBEE;}
 #pubbb{
-  margin-left: 25px;
+  margin-left: 2px;
+  position: absolute;
 }
 #pub11{
   padding: 0%;
@@ -305,3 +306,73 @@ input{
   border-color: transparent;
   padding-top: 0px;
 }
+
+
+
+ @media only screen and (max-width:   956px) {
+
+
+   #noot{
+     position: absolute;
+   }
+   #noot2{
+     width: 120%;
+   }
+   #sharr{
+     position: absolute;
+     z-index: 1;
+     float: left;
+     top: 120%;
+     left: 75%;
+   }
+
+   #share{
+     bottom: 0px;
+     left: 0px;
+     width: 90%;
+     border-width:2px;
+     border-color: white;
+     position: relative;
+     overflow: hidden;
+   }
+   #txtshare{
+     position: absolute;
+     top: -47%;
+   }
+
+   #prjtxt2{
+   color: #989898;
+   margin-left: 4px;
+   position: absolute;
+   text-align: left;
+   font-size: 0.7rem;
+   }
+   #prjtxt3{
+   color: #989898;
+   position: relative;
+   float: right;
+   margin-right: 4px;
+   font-size: 0.7rem;
+   }
+   p{font-size:0.7rem;}
+   #prjtxt{
+     font-size: 1rem;
+   }
+
+
+ }
+
+
+  @media only screen and (max-width:   767px) {
+    #pubbb{
+      display: none;
+      position: absolute;
+      right:40px;
+    }
+    #shr{
+      display: none;
+    }
+    #pu{
+      display: none;
+    }
+  }
