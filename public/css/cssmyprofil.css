@@ -5,11 +5,24 @@
 
 #link{
   margin-left: 10%;
+}
+
+#srchsv{
+  bottom: 2px;
+  position: absolute;
 
 }
 
+#sk{
+  list-style-type: none;
+  position: block;
+  float: left;
+}
 
-
+#svcsl{
+  left:550px;
+   position:absolute;
+}
 
 img {
   max-width: 100%; }
@@ -605,3 +618,163 @@ opacity: 1;
       top:-3%;
 
     }
+
+
+
+  /* add skills modal */
+  .profile .card2 {
+    overflow: hidden;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    padding: 12px 15px;
+    background-color: white; }
+    .profile .card2 h3 {
+      font-weight: 600;
+      font-size: 20px;
+      color: #828282;
+      display: inline; }
+    .profile .card2 button {
+      float: right;
+      border: 1px solid #00AEEF;
+      color: #00AEEF;
+      padding: 0 39px;
+      font-size: 14px; }
+    .profile .card2 .skills > div {
+      margin-bottom: 18px;
+      white-space: nowrap; }
+    .profile .card2 .skills i.fas.fa-circle {
+      font-size: 8px;
+      color: #828282;
+      position: relative;
+      top: -1px; }
+    .profile .card2 .skills i.far.fa-times-circle {
+      color: #EB5757;
+      position: relative;
+      top: 1px;
+      cursor: pointer; }
+    .profile .card2 > div {
+      padding-left: 7px;
+      margin-top: 15px; }
+      .profile .card2 > div p {
+        font-size: 15px; }
+
+        .btn-round, nav .sign_btn, .start_now, .become {
+          -webkit-border-radius: 10em !important;
+          border-radius: 10em !important; }
+
+          .secondary-button {
+            border: 1px solid #00AEEF;
+            font-size: 14px;
+            padding: 3px 30px;
+            color: #fff;
+            background-color: #00AEEF; }
+
+            .profile .card2.toEdit .save {
+              float: right;
+              font-size: 14px;
+              margin-left: 15px;
+              padding-top: 0;
+              padding-bottom: 0;
+              color: #fff;
+              height: auto; }
+
+
+
+
+
+
+
+
+
+   @media only screen and (max-width:   956px) {
+     #numps{
+       font-size: 13px;
+      left: 0px;
+     }
+
+
+      #TOFSKILLS{
+        display: none;
+      }
+
+      #svcsl{
+        left:0px;
+        top: 0px;
+         position:relative;
+      }
+
+      #prjtxt{
+      margin-top:-70px;
+      margin-left: 40px;
+      font-size: 1rem;
+      }
+
+      #txtprjt{
+        text-align: center;
+
+        font-family: Arial, Helvetica, sans-serif;
+      font-size: 10px;
+      letter-spacing: 0.5px;
+      word-spacing: 3px;
+      color: #000000;
+      font-weight: 100;
+      }
+      #titlprjt{
+        text-align: center;
+        font-size: 20px;}
+
+        #JAIME{
+          font-size: 0.6rem;
+        }
+     .container2{
+       width: 75%;
+       position: relative;
+       float: left;
+     }
+
+     h3{
+       font-size: 15px;
+     }
+
+     #aedit{
+
+       float:left;
+       right: 30px;
+       width: 18%;
+       font-size: 13px;
+       height: 100%;
+     }
+     #btnskills{
+       width: 90%;
+       padding-left: 0px;
+       float: right;
+     }
+
+
+
+   }
+
+
+      @media only screen and (max-width:   767px) {
+        #cardd{
+          width: 140%;
+        }
+
+
+             #pubbb{
+               margin-left: 0px;
+                 display: none;
+               width: 75%;
+             }
+
+             .card {
+               margin-bottom: 1.875em;
+               border-radius: 5px;
+               padding: 0;
+               width: 140%;
+
+
+               }
+
+
+      }

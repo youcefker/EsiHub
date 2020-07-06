@@ -2,295 +2,14 @@
 input[type=text ]{
 
       padding: 10px 20px;
-    
+
 
 }
 
 
 #imgbuff{
   width:100%;
-  <!doctype html>
-  <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
-  <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
-  <!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-  <!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
-  <head>
-  
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-      <meta charset="utf-8">
-      <link href="https://fonts.googleapis.com/css?family=Manjari&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-  
-      <title>Search a project or a devlopper</title>
-  
-    
-  
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css">
-  
-      <link rel="stylesheet" href="./css/rech_style.css">
-  
-  
-  
-    
-  
-  
-  </head>
-  
-  <body>
-  
-  
-    <header>
-  
-  
-        <nav  class="navbar navbar-expand-lg navbar-dark    ">
-  
-          <a class="navbar-brand " href="#">Navbar</a>
-          <button onclick="openNav()" id="menuphone" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-  
-  
-  
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <div id="rolling_bar">
-              <input class="colortypingg" type="text" id="txxt"  placeholder="search developer or project">
-              <a href="#" id="bbtn">
-                <h3><strong>|</strong></h3><i class="fas fa-search"></i>
-              </a>
-  
-            </div>
-  
-            <ul class="navbar-nav mr-auto">
-              <li id="margli" class="nav-item">
-  
-  
-              </li>
-            </ul>
-            <ul id="margul1" class="navbar-nav mr-auto">
-  
-  
-              <li id="margli" class="nav-item active">
-                <a class="nav-link" href="#"><strong>Home</strong> <span class="sr-only">(current)</span></a>
-              </li>
-              <li id="margli" class="nav-item active">
-                <a class="nav-link" href="#"><strong>Messages</strong> <span class="sr-only">(current)</span></a>
-              </li>
-              <li id="margli" class="nav-item active">
-                <a class="nav-link" href="#"><strong>Notifications</strong> <span class="sr-only">(current)</span></a>
-              </li>
-              <li id="margli" class="nav-item active">
-                <a class="nav-link" href="#"><strong>Profile</strong> <span class="sr-only">(current)</span></a>
-              </li>
-  
-  
-            </ul>
-  
-            <ul id="margul2" class="navbar-nav mr-auto">
-  
-              <li id="margli2" class="nav-item">
-                <img class="nav-link" href="#" id="imgbuff" src=".\img\icon_buffer-512.png" alt="icon_buffer-512.png">
-              </li>
-              <li id="margli22" class="nav-item">
-                <a class="nav-link" href="#"><strong>projects<br>&nbsp;&nbsp;&nbsp;&nbsp; &</br>developers</strong>  </a>
-              </li>
-  
-            </ul>
-  
-          </div>
-  
-        </nav>
-  
-  
-  
-                <div id="mobile__menu" class="overlay">
-                    <a class="close" onclick="closeNav()">&times;</a>
-                    <div class="overlay__content">
-                        <a href="#">home</a>
-                        <a href="#">Messages</a>
-                        <a href="#">Notifications</a>
-                        <a href="#">Profile</a>
-                        <div id="rolling_bar">
-                          <input class="colortypingg" type="text" id="txxt"  placeholder="search developer or project">
-                          <a href="#" id="bbtn">
-                            <h3><strong>|</strong></h3><i class="fas fa-search"></i>
-                          </a>
-  
-                        </div>
-                    </div>
-                </div>
-                </header>
-  
-  
-     <div id="main">
-  
-      <div class="content">
-       <img class="middle" src="img/dev_project.PNG">
-       <div class="txt">
-         <br><br><h1>Bienvenue dans votre communauté professionnelle</h1>
-         <div class="recherche">
-         <div class="form">
-        
-        <ul class="top-area">
-          <li class="tab active"><a href="#signup">Project</a></li>
-          <li class="tab"><a href="#login">Devlopper</a></li>
-        </ul>
-        
-        <div class="tab-content">
-          <div id="signup">   
-            
-            
-            <form action="/" method="post">
-            
-            <div class="top-row">
-              <div class="label-field">
-                <label>
-                  Name of the project<span class="req">*</span>
-                </label>
-                <input type="text" required autocomplete="off" />
-              </div>
-          
-              <div class="label-field">
-                <div class="select">
-                  <select name="slct" id="slct">
-                    <option selected disabled>Type of the project<span class="req">*</span></option>
-                    <option value="1">type1</option>
-                    <option value="2">type2</option>
-                    <option value="3">type3</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-            <div class="button1">
-              <button class="search">Search</button>
-            </div>
-   
-           
-            
-            </form>
-   
-          </div>
-          
-          <div id="login">   
-            
-            
-             <form action="/" method="post">
-            
-            <div class="top-row">
-              <div class="label-field">
-                <label>
-                  First name<span class="req">*</span>
-                </label>
-                <input type="text" required autocomplete="off" />
-              </div>
-          
-              <div class="label-field">
-                <label>
-                  Last Name<span class="req">*</span>
-                </label>
-                <input type="text"required autocomplete="off"/>
-              </div>
-            </div>
-   
-           
-            
-            </form>
-            <div class="button2">
-              <button class="search">Search</button>
-            </div>
-          </div>
-          
-          
-        </div>  
-        
-  </div>
-   
-    
-         
-        </div>
-  </div>
-  
-       </div>
-       </div>
-       
-      </div>
-      
-      
-     </div>
-  
-  
-  
-  
-  <script type="text/javascript" src="mobile.js"></script>
-  <script >
-  
-  
-  
-  
-  
-  function openNav() {
-  document.getElementById("mobile__menu").style.width = "100%";
-  }
-  
-  function closeNav() {
-  document.getElementById("mobile__menu").style.width = "0";
-  }
-  
-  
-  
-  </script>
-  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-  <script  src="function.js"></script>
-  <script>
-    $('.form').find('input, textarea').on('keyup blur focus', function (e) {
-    
-    var $this = $(this),
-        label = $this.prev('label');
-  
-      if (e.type === 'keyup') {
-        if ($this.val() === '') {
-            label.removeClass('active highlight');
-          } else {
-            label.addClass('active highlight');
-          }
-      } else if (e.type === 'blur') {
-        if( $this.val() === '' ) {
-          label.removeClass('active highlight'); 
-        } else {
-          label.removeClass('highlight');   
-        }   
-      } else if (e.type === 'focus') {
-        
-        if( $this.val() === '' ) {
-          label.removeClass('highlight'); 
-        } 
-        else if( $this.val() !== '' ) {
-          label.addClass('highlight');
-        }
-      }
-  
-  });
-  
-  $('.tab a').on('click', function (e) {
-    
-    e.preventDefault();
-    
-    $(this).parent().addClass('active');
-    $(this).parent().siblings().removeClass('active');
-    
-    target = $(this).attr('href');
-  
-    $('.tab-content > div').not(target).hide();
-    
-    $(target).fadeIn(600);
-    
-  });
-  </script>
-  
-  
-  
-  </body>
-  
+
   margin: 0px;
   margin-left: 0%;
 }
@@ -411,6 +130,15 @@ margin-bottom: -20px;
   .menu {
     display: initial;
   }
+
+  input[type=text ]{
+        padding: 10px 20px;
+  }
+
+  select{
+    width: 225px;
+  }
+
 }
 
 
@@ -503,7 +231,7 @@ input[id^="txxt"]::-webkit-input-placeholder {
 
 body {
   background-color: #EAE9EA;
-  
+
 }
 
 #main{
@@ -556,12 +284,12 @@ a:hover {
   color: #0080ff;
 }
 .form {
-  
+
   padding: 40px;
   max-width: 600px;
   margin: 40px auto;
   margin-top: -40px;
-  
+
 }
 .top-area {
   list-style: none;
@@ -587,18 +315,18 @@ a:hover {
 }
 .top-area li a:hover {
 
-  
+
 }
 .top-area .active a {
- 
+
   color: #007FEB;
   text-decoration: underline;
 }
- 
+
 .tab-content > div:last-child {
   display: none;
 }
- 
+
 h1 {
   text-align: center;
   color: black;
@@ -635,7 +363,7 @@ label.highlight {
 input, textarea {
   font-size: 20px;
   display: block;
-  width: 320px;
+  width: 225px;
   height:45px;
   background: none;
   background-image: none;
@@ -663,7 +391,7 @@ textarea {
 }
 .top-row > div {
   float: left;
-  
+
   margin-right: 4%;
 }
 .top-row > div:last-child {
@@ -697,14 +425,35 @@ textarea {
 @media (max-width: 765px) {
     label {
       left: 0;
-    }  
-  
-  
+    }
+
+    .middle{
+display: none;
+    }
+
+    .txt{
+      float: left;
+      vertical-align: top;
+      width: 50%;
+      font-size: 20px;
+      text-align: center;
+      margin-top: -40px;
+    }
+
+    #main{
+      background-color: white;
+      padding: 50px;
+      margin: 0px 0px 0px 0px;
+      width: 100%;
+      border-radius: 20px;
+    }
+
+
   }
 
 
 
- 
+
   /* Remove IE arrow */
   select::-ms-expand {
     display: none;
@@ -718,7 +467,7 @@ textarea {
     cursor: pointer;
     position: relative;
     display: flex;
-    width: 320px;
+    width: 225px;
     height: 45px;
     line-height: 3;
     border: 2px solid #a0b3b0;
@@ -726,7 +475,7 @@ textarea {
     border-radius: 15px;
     font-size: 20px;;
   }
-  
+
 
   option{
     color: #007FEB;
@@ -743,10 +492,3 @@ textarea {
     width: 100px;
     height: 40px;
   }
- 
-  
-
-
-
-
-
