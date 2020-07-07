@@ -161,7 +161,7 @@ app.post('/add-comment', notificationController.postAddComment)
 
 app.post('/add-like/:projectId', notificationController.addLike)
 
-app.post('/add-rating/:projectId', notificationController.addRating)
+app.post('/add-rating/:info', notificationController.addRating)
 
 
 

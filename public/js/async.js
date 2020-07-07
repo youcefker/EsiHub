@@ -15,14 +15,17 @@ const addLike = (btn) => {
 }
 
 const addRating = (input) => {
-    const ratingValue = input.value
-    const projectId = input.parentNode.parentnode.parentNode.querySelector("[name=projectId]").value
-    fetch("/add-rating/" + peojectId, {
+    console.log(input)
+    const rating = input.value
+    const projId = input.parentNode.parentNode.parentNode.querySelector('[name=projectId]').value
+    fetch("/add-rating/" + projId + ':' + rating, {
         method: "POST",
-        body: JSON.stringify({
-            ratingValue: ratingValue
-        })
     })
-    .then()
+    .then(response => {
+        return response.json()
+    })
+    .then(data => {
+        console.log(data)
+    })
     .catch()
 }

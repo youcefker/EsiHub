@@ -4,10 +4,6 @@ const Project = require('../models/Project')
 
 const Notification = require('../models/Notification')
 
-const { param } = require('jquery')
-const { session } = require('passport')
-const { getEditProject } = require('./project')
-const { DATE } = require('sequelize/types')
 
 exports.getNotify = (req, res, next) => {
     let userNotifications = []
@@ -45,7 +41,7 @@ exports.getAddComment = (req, res, next) => {
             res.render('project/add-comment', {
                 project: project,
                 path: '/add-comment',
-                commentNotifications: notifications.reverse()
+                commentNotifications: notifications.reverse(),
             })        
         })
     })
@@ -78,12 +74,10 @@ exports.postAddComment = (req, res, next) => {
 
 exports.addLike = (req, res, next) => {
     const projectId = req.params.projectId 
-    console.log(projectId)
     Project.findByPk(projectId)
     .then(project => {
-        return  Project.update({likesNumber: project.likesNumber + 1}, { where: {id: projectId}, individualHooks: true})
+        return  Project.update( {likesNumber: project.likesNumber + 1}, { where: {id: projectId}, individualHooks: true})
         .then(result => {
-            console.log(result)
             return project.createNotification({
                 content: '',
                 type: 'like',
@@ -102,22 +96,29 @@ exports.addLike = (req, res, next) => {
 }
 
 exports.addRating = (req, res, next) => {
-    const projectId = req.params.projectId
-    const ratingValue = int(req.body.ratingValue)
+    const info = req.params.info
+    console.log(info)
+    const arrayInfo = info.split(':')
+    const projectId = arrayInfo[0]
+    const ratingValue = parseInt(arrayInfo[1])
     console.log(ratingValue)
     Project.findByPk(projectId)
     .then(project => {
-        return Project.update({rating: project.rating + ratingValue/(project.numberOfRaters + 1) }, { where: {id: projectId}, individualHooks: true})
+        return Project.update({rating: parseInt(project.rating) + ratingValue }, { where: {id: projectId}, individualHooks: true})
         .then(result => {
-            return project.createNotification({
-                content: ratingValue + 'stars',
-                type: 'rating',
-                notifierId: req.session._id,
-                date: new Date()
+            return Project.update({numberOfRaters: parseInt(project.numberOfRaters) + 1 }, { where: {id: projectId}, individualHooks: true})
+            .then(update => {
+                return project.createNotification({
+                    content: ratingValue + 'stars',
+                    type: 'rating',
+                    notifierId: req.session._id,
+                    date: new Date()
+                })
+                .then(result => {
+                    res.status(200).json({message: "project updated successfully!"})
+                })
             })
-            .then(result => {
-                res.status(200).json({message: "project updated successfully!"})
-            })
+            
         })
     })
     .catch(err => {
