@@ -3,7 +3,7 @@
 	margin: 75px auto 0;
 	box-shadow: 0 3px 30px rgba(0,0,0,0.3);
 	border-radius: 10px;
-}   
+}
 .card .card-head{
 	position: relative;
 	height:40px;
@@ -107,3 +107,92 @@
 	justify-content: space-around;
 	align-items: stretch;
   }
+
+	#card .card-foot .left{
+		float: right;
+		position: absolute;
+		top: 92%;
+	}
+
+
+
+		@media only screen and (max-width:   620px)  {
+			#card{
+				width: 450px;
+				height: 100%;
+				margin: 75px auto 0;
+				box-shadow: 0 3px 30px rgba(0,0,0,0.3);
+				border-radius: 10px;
+			}
+
+			#card .card-foot .left{
+				float: right;
+				position: absolute;
+				right: 20px;
+				top: 95%;
+			}
+			#card .card-foot{
+				display:block;
+				width: 94%;
+				border-top: 1px solid #000;
+				padding-top:5px;
+				height: 95px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+			}
+
+				@media only screen and (max-width:   510px)  {
+					#card{
+						width: 380px;
+						height: 100%;
+						margin: 75px auto 0;
+						box-shadow: 0 3px 30px rgba(0,0,0,0.3);
+						border-radius: 10px;
+					}
+					#card .card-foot .left{
+						float: right;
+						position: absolute;
+						right: -10px;
+						top: 95%;
+					}
+
+					#card .card-foot{
+						display:block;
+						width: 94%;
+						border-top: 1px solid #000;
+						padding-top:5px;
+						height: 95px;
+						margin-left: auto;
+						margin-right: auto;
+					}
+
+				}
+
+				@media only screen and (max-width:   360px)  {
+					#card{
+						width: 340px;
+						height: 100%;
+						margin: 75px auto 0;
+						box-shadow: 0 3px 30px rgba(0,0,0,0.3);
+						border-radius: 10px;
+						left: 3%;
+					}
+
+					#card .card-foot .left{
+						float: right;
+						position: absolute;
+						right: -10px;
+						top: 95%;
+					}
+					#card .card-foot{
+						display:block;
+						width: 94%;
+						border-top: 1px solid #000;
+						padding-top:5px;
+						height: 95px;
+						margin-left: auto;
+						margin-right: auto;
+					}
+				}

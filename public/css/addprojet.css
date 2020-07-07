@@ -5,9 +5,6 @@ margin-left: 35px;
 
 }
 
-
-
-
 #aedit{
   width: 15%;
   height: 100%;
@@ -567,22 +564,132 @@ border-color: red;
   left: 10%;
 }
 
+
+
+#igUpload2{}
+
+
+
+  #vdw{
+    position: absolute;
+  
+  }
+
+
+
+ @media only screen and (max-width:   991px) {
+
+   #vdw{
+      position: absolute;
+      right: 400px;
+      top: 0px;
+    }
+
 #btnpost{
-  left: 15%;
+  margin: 0px;
+  top:95px;
 }
 
-.user-message {
-  margin: auto;
-  width: 90%;
-  border: 1px solid #4771fa;
-  padding: 0.5rem;
-  border-radius: 3px;
-  background: #b9c9ff;
-  text-align: center;
+#ccrd{
+  margin: 0px;
+  width: 648px;
 }
 
-.user-message--error {
-  border-color: red;
-  background: rgb(255, 176, 176);
-  color: red;
-}
+   #prjttyp{
+
+   }
+
+   #prjttitle{
+     top:48px;
+     position: absolute;
+
+   }
+
+   #btnpost{
+
+     left: 0px;
+     top: 0px;
+
+   }
+
+   hr{
+      display: none;
+   }
+
+   textarea{
+     width: 150%;
+     height: 42%;
+     margin-top: 60px;
+
+   }
+       textarea {
+         outline: none;
+       }
+
+   ::placeholder {
+     color: #01031D;
+     font-size: 1.5em;
+     padding-left: 20px;
+     font-weight: Semilight Italic;
+   }
+
+   textarea { font-size: 0.6em; }
+
+   .avatar-size2{
+     width:8rem;
+     right: 52%;
+     top: 137px;
+     height:6rem;
+   }
+
+  .border-box{
+    width: 10px;
+  }
+  .add_file{
+    width: 130px;
+    height: 106px;
+    top: -17px;
+    right: 130%;
+  }
+  #addtof{
+
+    left: -5%;
+  }
+
+
+  #pubbb{
+    right: 0%;
+    width: 40%;
+    display: none;
+
+
+  }
+
+ }
+
+
+
+ @media only screen and (max-width:   570px) {
+   #btnpost{
+
+      left: 147px;
+      top: 0px;
+
+    }
+
+
+ }
+
+
+
+  @media only screen and (max-width:   400px) {
+  #addtof{
+    left:4%;
+  }
+
+     #vdw{
+       position: absolute;
+       right: 80px;
+       top: 0px;
+     }
+  }

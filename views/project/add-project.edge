@@ -122,7 +122,7 @@
 
   <div class="row">
     <div class="col-lg-10">
-      <div class="row">
+      <div class="row-lg">
 
 
         <div class="card">
@@ -133,12 +133,12 @@
       <div class="col-sm-8">  <div class="dropdown">
         <div class="row">
 
-          <div class="col-4">
+          <div id="prjttyp" class="col-4">
             <span class="project_type">
               <select class="box" name="projectType" style="height: 40px; width: 150px;" >
               @if(errorMessage)
               <option  value="" disabled selected >{{project.projectType}}</option>
-              @else 
+              @else
               <option  value="" disabled selected >Project Type</option>
               @endif
                <option value="Web"t>Web</option>
@@ -152,14 +152,14 @@
             </span>
           </div>
 
-          <div class="col-4">
+          <div id="prjttitle" class="col-4">
   <!-- title projet -->
             <span class="titre">
             @if(errorMessage)
             <input class="box" type="text"  style="height: 40px;width: 150px;" name="title" value="{{project.title}}">
-            @else 
+            @else
             <input class="box" type="text" placeholder="Project title" style="height: 40px;width: 150px;" name="title">
-            @endif  
+            @endif
             </span>
           </div>
 
@@ -169,7 +169,7 @@
      </div>
 
      <!-- boutton post -->
-    <div id="btnpost" class="col-sm-4">  <button type="submit" class="btn btn-xs btn-success "><strong>&nbsp;&nbsp;&nbsp;&nbsp;post&nbsp;&nbsp;&nbsp;&nbsp;</strong></button></div>
+    <div id="btnpost" class="col-4">  <button type="submit" class="btn btn-xs btn-success "><strong>&nbsp;&nbsp;&nbsp;&nbsp;post&nbsp;&nbsp;&nbsp;&nbsp;</strong></button></div>
 
   </div>
 
@@ -194,8 +194,9 @@
 
             <!-- add tof -->
 
+
         <div id="addtof" class="col-4">
-                <div class="row">
+                <div id="addtof" class="row">
                       <div id="imgadd"  class="card-body">
                         <div class="avatar-container2 avatar-size2 ">
                           <div id="hnatatht"></div>
@@ -214,8 +215,8 @@
                 </div>
 
 <!-- add file -->
-<div id="addtof" class="col-4">
-  <div class="row">
+
+  <div id="vdw" class="row">
         <div id="imgadd"  class="card-body">
           <div class="avatar-container2 avatar-size2 ">
             <div id="hnatatht"></div>
@@ -232,15 +233,17 @@
 
         </div>
   </div>
-               
-        </div>
+
+
       </div>
     </div>
 </div>
 </div>
-</div>
-</div>
+
 </form>
+</div>
+</div></div>
+
 <!-- cote droit li fih hdok tae mlh w hack day  -->
 
     <div id="pubbb" class="col-lg-2">
