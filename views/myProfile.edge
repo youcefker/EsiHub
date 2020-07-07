@@ -20,6 +20,7 @@
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/cssmyprofil.css">
+    <link rel="stylesheet" type="text/css" href="/css/projectPost0.css">
     <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script> -->
 
 <style >
@@ -138,77 +139,60 @@
 
           <div class="col-md-8">
                       <div class="row ">
-                        <a href="/add-project" class="btn btn-block btn-primary btn-success">Add a project</a>
+                        <a href="/add-project" id="addprjj" class="btn btn-block btn-primary btn-success">Add a project</a>
                       </div>
 
                     </br>
 
 <!-- hna tae projet ... -->
-@each(project in projects)
+
          <div class="row ">
 
-          <div class="card">
-              <div class="card-body">
-              <img id="blah2" src="{{profile.avatar}}" alt="{{profile.name}}"/>
-
-                <div class="content">
-
-                  <div class="row">
-
-
-                  <h4 id="prjtxt"><strong> {{profile.name}} &nbsp;&nbsp;&nbsp;&nbsp; <small id="prjtxt2"><strong>{{project.projectType}}</strong></small>  </strong></h4>
-
-                  </div>
-
-
-
-             <div class="row">
-
-               <div class="col-6">
-                 <h4 id="titlprjt" class="mb-4">{{project.title}} </h4>
-              <p id="txtprjt"  >{{project.description}}</p>
+           <div class="grid">
+           @each(project in projs)
+           <article id="card" class="card">
+               <div class="card-head">
+                   <img src="/img/profile.jpg">
+                   <ul>
+                       <li class="name">Ait Abdelkaoui karina</li>
+                       <li class="type">{{project.projectType}} </li>
+                   </ul>
+               </div>
+               <div class="card-body">
+                   <div class="row">
+                       <div class="col">
+                           <p class="title">{{project.title}} </p>
+                           <p>
+                              {{project.description}}
+                           </p>
+                       </div>
+                       <div id="mg" class="col">
+                       <img  src="{{project.imagePath}}">
+                       </div>
+                   </div>
+               </div>
+               <div class="card-foot">
+               <input type="hidden" name="projectId" value="{{project.id}}">
+                  <ul class="right">
+                      <li><button onclick="addLike(this)" class="btn btn-link"><i class="fa fa-thumbs-up" aria-hidden="true" style="font-size:150%;"></i></button></li>
+                  <li><a href='/add-comment/{{project.id}}'>Comment</a></li>
+                      <li class="ratting-wrapper">
+                          <input type="radio" name="rating" id="star-1" value="1" onclick="addRating()"><label for="star-1"></label>
+                          <input type="radio" name="rating" id="star-2" value="2" onclick="addRating()"><label for="star-2"></label>
+                          <input type="radio" name="rating" id="star-3" value="3" onclick="addRating()"><label for="star-3"></label>
+                          <input type="radio" name="rating" id="star-4" value="4" onclick="addRating()"><label for="star-4"></label>
+                          <input type="radio" name="rating" id="star-5" value="5" onclick="addRating()"><label for="star-5"></label>
+                      </li>
+                      <li  class="left"><a href='/projects/{{project.id}}'>Details</a></li>
+                  </ul>
 
 
                </div>
-
-               <div class="col-6">
-               <img src="{{project.imagePath}}" alt="project.title">
-               </div>
-
-
-             </div>
-             <div class="row">
-               <hr width="100%" color="#707070"></hr>
-
-             </div>
-             <div class="row">
-
-               <a id="JAIME" href="#" class="myButton"><strong>LIKE</strong></a>
-               <a id="JAIME" href="/add-comment/{{project.id}}" class="myButton"><strong>Comment</strong></a>
-
-                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-               <div class="rating"><!--
-   --><a href="#5" title="Donner 5 étoiles">☆</a><!--
-   --><a href="#4" title="Donner 4 étoiles">☆</a><!--
-   --><a href="#3" title="Donner 3 étoiles">☆</a><!--
-   --><a href="#2" title="Donner 2 étoiles">☆</a><!--
-   --><a href="#1" title="Donner 1 étoile">☆</a>
-    </div>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; <a id="JAIME" href='/projects/{{project.id}}' class="myButton"><strong>Details</strong></a>
-
-             </div>
-
-
-
-
-
-
-              </div>
-
-
-          </div>
-
-
-          </div>
+           </article>
+           @else
+             <h2>No project found!</h2>
+           @endeach
+       </div>
 
   </div>
 
@@ -224,7 +208,7 @@
 
 
     </div>
-@endeach
+
 
 <!-- cote droit li fih hdok tae mlh w hack day  -->
 

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/projectPost.css">
@@ -27,14 +27,14 @@
                   <a href="#" id="bbtn">
                     <h3><strong>|</strong></h3><i class="fas fa-search"></i>
                   </a>
-  
+
             </div>
-  
+
             <ul class="navbar-nav mr-auto">
               <li id="margli" class="nav-item">
               </li>
             </ul>
-  
+
             <ul id="margul1" class="navbar-nav mr-auto">
               <li id="margli" class="nav-item active">
                 <a class="nav-link" href="/projects"><strong>Home</strong> <span class="sr-only">(current)</span></a>
@@ -49,20 +49,20 @@
                 <a class="nav-link" href="/me"><strong>Profile</strong> <span class="sr-only">(current)</span></a>
               </li>
             </ul>
-  
+
             <ul id="margul2" class="navbar-nav mr-auto">
-  
+
               <li id="margli2" class="nav-item">
                 <img class="nav-link" href="#" id="imgbuff" src="/img/icon_buffer-512.png" alt="icon_buffer-512.png">
               </li>
               <li id="margli22" class="nav-item">
                 <a class="nav-link" href="/search"><strong>projects &</br>developers</strong>  </a>
               </li>
-  
+
             </ul>
-  
+
           </div>
-  
+
         </nav>
         <div id="mobile__menu" class="overlay">
             <a class="close" onclick="closeNav()">&times;</a>
@@ -81,7 +81,7 @@
             </div>
         </div>
         </header>
-    <!-- end nav bar -->    
+    <!-- end nav bar -->
     <div class="grid">
     @each(project in projs)
     <article class="card">
@@ -108,7 +108,7 @@
         <div class="card-foot">
         <input type="hidden" name="projectId" value="{{project.id}}">
            <ul class="right">
-               <li><button onclick="addLike(this)">Like</button></li>
+               <li><button onclick="addLike(this)" class="btn btn-link"><i class="fa fa-thumbs-up" aria-hidden="true" style="font-size:150%;"></i></button></li>
            <li><a href='/add-comment/{{project.id}}'>Comment</a></li>
                <li class="ratting-wrapper">
                    <input type="radio" name="rating" id="star-1" value="1" onclick="addRating()"><label for="star-1"></label>
@@ -124,11 +124,11 @@
 
         </div>
     </article>
-    @else 
+    @else
       <h2>No project found!</h2>
     @endeach
 </div>
-   
+
 
 
 
