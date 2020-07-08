@@ -1,4 +1,21 @@
 
+
+#drop{
+  top:15px;
+  right: 50px;
+}
+
+#drop2{
+  background:#01031D;
+}
+.dropdown-menu a:hover
+ {
+   background:#01031D;
+  }
+
+
+
+
 #imgbuff{
   width:100%;
   margin: 0px;
@@ -102,6 +119,11 @@ margin-bottom: -20px;
   cursor: pointer;
 }
 
+
+#research{
+  display:none;
+}
+
 @media screen and (max-height: 450px) {
   .overlay a {
     font-size: 20px;
@@ -113,7 +135,41 @@ margin-bottom: -20px;
   }
 }
 
+#research{
+  display: none;
+}
+#logoutt{
+  display: none;
+}
+
+@media only screen and (max-width: 991px) {
+  #logoutt{
+    display: block;
+  }
+  #margul1{
+    margin-left: 0px;
+    padding-top: 0px;
+    margin-right:10%;
+  }
+
+  #research{
+    display: block;
+  }
+  #rolling_bar{display: none;}
+
+  #margul2{
+    display: none;
+  }
+
+  #drop{
+    display: none;
+  }
+}
+
+
 @media only screen and (max-width: 800px) {
+
+
   .nav__links,
   .cta {
     display: none;
@@ -188,11 +244,11 @@ input[id^="txxt"]::-webkit-input-placeholder {
 }
 
 #rolling_bar:hover > #txxt{
-  font-size: 12px;
+    font-size: 12px;
     position: absolute;
     width: 200px;
-    margin-top: -12px;
-    margin-left: -4px;
+    margin-top: -6px;
+    margin-left: 0px;
     color: #707070;
 
 }
@@ -200,9 +256,13 @@ input[id^="txxt"]::-webkit-input-placeholder {
 #rolling_bar:hover > #bbtn{
     transform: rotate(0turn);
 
-    transition: 0.6s;
+    transition: 0.9s;
 }
 
 .fa-search{
   margin: 15px;
+}
+
+#overlay__content{
+  display: absolute;
 }
