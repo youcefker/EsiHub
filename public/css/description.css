@@ -21,7 +21,7 @@ body {
 	display:flex;
 	justify-content:center;
 	align-items:center;
-	border-left:3px solid rgba(0,0,0,0.9); 
+	border-left:3px solid rgba(0,0,0,0.9);
 }
 
 .search-btn .fa{
@@ -73,7 +73,7 @@ ul li a .name span{
   	transition: 0.4s;
 }
 
- 
+
 ul li a .name span:before{
 	content: attr(data-text);
 	position: absolute;
@@ -85,9 +85,9 @@ ul li a .name span:before{
 }
 
 ul li a:hover .name span{
-   transform: translateY(30px);	
+   transform: translateY(30px);
 }
-   
+
 nav img{
 	position:relative;
 	width: 50px;
@@ -125,7 +125,7 @@ h5,h3{
   color:#4f91fc;
   font-weight:250px;
   margin-top:10px;
-  text-align: center; 
+  text-align: center;
 }
 
 .box1,.box2{
@@ -165,7 +165,7 @@ h5,h3{
 .P1{
   font-weight:150px;
   margin-top:10px;
-  text-align: center; 
+  text-align: center;
 }
 
 div.btn ul li{
@@ -185,13 +185,13 @@ h1{
     font-weight:250px;
     margin-top:10px;
     margin-bottom: 20px;
-    text-align:top; 
+    text-align:top;
 }
 .p2{
     color:#4f91fc;
     font-weight:250px;
     margin-top:10px;
-    text-align:top; 
+    text-align:top;
 }
 
 #more{
@@ -202,7 +202,7 @@ h1{
 	float: right;
 	width: 90px;
 	height:33px;
-	margin-bottom: 40px; 
+	margin-bottom: 40px;
 }
 
 .plus{
@@ -214,6 +214,54 @@ h1{
 }
 
 
+@media only screen and (max-width: 410px) {
 
 
+  .box1,.box2{
+     display: block;
+     padding: 20px;
+     padding-bottom:0px;
+     border-radius:30px;
+     border:2px solid #4f91fc;
+     width:200px;
+     margin-right: auto;
+     margin-left:auto;
+     margin-bottom:20px;
+  }
 
+  .box3,.box5{
+     display: block;
+     padding: 20px;
+     padding-bottom: 0px;
+     width:200px;
+     margin-right: auto;
+     margin-left:auto;
+     margin-bottom: 10px;
+  }
+
+  .box4{
+     display: block;
+     padding: 20px;
+     padding-bottom: 0px;
+     width:200px;
+     height:250px;
+     margin-right:auto;
+     margin-left:auto;
+     margin-bottom: 10px;
+     background-color:#EFEFEF;
+  }
+
+  #mgg{
+    width: 200px;
+  }
+  #mggg{
+    width: 150px;
+  }
+
+
+}
+
+.video-fluid {
+    width: 100%;
+    height: auto;
+}
