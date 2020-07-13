@@ -30,6 +30,9 @@ const Notification = sequelize.define('notification', {
     },
     projectUser: {
         type: Sequelize.STRING
+    },
+    projectTitle: {
+        type: Sequelize.STRING
     }
 });
 

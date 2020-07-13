@@ -65,7 +65,8 @@ exports.postAddComment = (req, res, next) => {
                 notifierAvatar: user.avatar,
                 notifier: user.userName,
                 date: new Date(),
-                projectUser: projectUsers[0].id
+                projectUser: projectUsers[0].id,
+                projectTitle: project.title
             }).then(result => {
                 console.log('content added successfully')
                 res.redirect('/add-comment/' + project.id)
@@ -96,7 +97,8 @@ exports.addLike = (req, res, next) => {
                     notifier: user.userName,
                     notifierId:req.session._id,
                     date: new Date(),
-                    projectUser: projectUsers[0].id
+                    projectUser: projectUsers[0].id,
+                    projectTitle: project.title
                 })
                 .then(result => {
                     return  Project.update( {likesNumber: project.likesNumber + 1}, { where: {id: projectId}, individualHooks: true})
@@ -139,7 +141,8 @@ exports.addRating = (req, res, next) => {
                         notifierAvatar: user.avatar,
                         notifier: user.userName,
                         date: new Date(),
-                        projectUser: projectUsers[0].id
+                        projectUser: projectUsers[0].id,
+                        projectTitle: project.title
                     })
                     .then(result => {
                         res.status(200).json({message: "project updated successfully!"})
