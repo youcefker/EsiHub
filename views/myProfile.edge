@@ -143,9 +143,9 @@
            @each(project in projs)
            <article id="card" class="card">
                <div class="card-head">
-                   <img src="/img/profile.jpg">
+               <img src="{{project.userAvatar}}">
                    <ul>
-                       <li class="name">Ait Abdelkaoui karina</li>
+                   <li class="name">{{project.projectUser}}</li>
                        <li class="type">{{project.projectType}} </li>
                    </ul>
                </div>
@@ -168,11 +168,11 @@
                       <li><button onclick="addLike(this)" class="btn btn-link"><i class="fa fa-thumbs-up" aria-hidden="true" style="font-size:150%;"></i></button></li>
                   <li><a href='/add-comment/{{project.id}}'>Comment</a></li>
                       <li class="ratting-wrapper">
-                          <input type="radio" name="rating" id="star-1" value="1" onclick="addRating()"><label for="star-1"></label>
-                          <input type="radio" name="rating" id="star-2" value="2" onclick="addRating()"><label for="star-2"></label>
-                          <input type="radio" name="rating" id="star-3" value="3" onclick="addRating()"><label for="star-3"></label>
-                          <input type="radio" name="rating" id="star-4" value="4" onclick="addRating()"><label for="star-4"></label>
-                          <input type="radio" name="rating" id="star-5" value="5" onclick="addRating()"><label for="star-5"></label>
+                          <input type="radio" name="rating" id="star-1" value="1" onclick="addRating(this)"><label for="star-1"></label>
+                          <input type="radio" name="rating" id="star-2" value="2" onclick="addRating(this)"><label for="star-2"></label>
+                          <input type="radio" name="rating" id="star-3" value="3" onclick="addRating(this)"><label for="star-3"></label>
+                          <input type="radio" name="rating" id="star-4" value="4" onclick="addRating(this)"><label for="star-4"></label>
+                          <input type="radio" name="rating" id="star-5" value="5" onclick="addRating(this)"><label for="star-5"></label>
                       </li>
                       <li  class="left"><a href='/projects/{{project.id}}'>Details</a></li>
                   </ul>
@@ -484,6 +484,7 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script type="text/javascript" src="/js/mobile.js"></script>
+<script src="/js/async.js"></script>
 <script >
 
 // hna tae timporter tof de profil
@@ -604,6 +605,7 @@ window.onclick = function(event) {
 
 </script>
 <script src="/js/main.js"></script>
+
 
 
 
