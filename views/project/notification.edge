@@ -15,14 +15,12 @@
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="/css/not.css">
+    <link rel="stylesheet" type="text/css" href="/css/nav.css">
 
 </head>
 
 <body>
-
-
-
-
+@include('includes.nav')
 <!-- hna nstf les cards hdok  -->
 <div class="content">
   <div class="row">
@@ -52,10 +50,9 @@
     <div class="col-md-7">
 
 <div class="row">
-
-
-  <!-- Notifications tae comment  -->
-      @each(comment in notifications)
+      @if(notifications)
+      @each(notification in notifications)
+        @if(notification.type === 'comment')
           <div   class="col-md-11">
             <div class="card">
                 <div class="card-body">
@@ -74,7 +71,58 @@
               <h5> <small id="prjtxt3"><strong> 13 hour ago</strong></small></h5>
             </div>
           </div>
+          @elseif(notification.type === 'like')
+          <div  class="row-lg-9">
+            <div class="card">
+                <div class="card-body">
+                    <div class="">
+                      <img id="blah2" src="img/92550852_1075202919514395_6362945305440157696_n.jpg" alt="" />
+                    </div>
+  
+                  <div id="content2" >
+                      <div class="row">
+                     <h5 id="prjtxt"><strong>Belambri samy &nbsp;&nbsp;&nbsp;&nbsp;</strong></h5>
+                     <p>liked ur project "project Title" </p>
+                      </div>
+                  </div>
+                </div>
+              <h5> <small id="prjtxt2"><strong> User type</strong></small></h5>
+              <h5> <small id="prjtxt3"><strong> 13 hour ago</strong></small></h5>
+            </div>
+          </div>
+          @elseif(notification.type === 'rating')
+          <div  class="row-lg-9">
+            <div class="card">
+                <div class="card-body">
+                  <div class="">
+                    <img id="blah2" src="img/92550852_1075202919514395_6362945305440157696_n.jpg" alt="" />
+                  </div>
+
+                  <div id="content2" >
+                    <div class="row">
+                     <h5 id="prjtxt"><strong>Belambri samy &nbsp;&nbsp;&nbsp;&nbsp;</strong></h5>
+                     <p>noted ur project "project Title"</p>
+                     <div class="rating"><!--
+         --><a href="#5" title="Donner 5 étoiles">☆</a><!--
+         --><a href="#4" title="Donner 4 étoiles">☆</a><!--
+         --><a href="#3" title="Donner 3 étoiles">☆</a><!--
+         --><a href="#2" title="Donner 2 étoiles">☆</a><!--
+         --><a href="#1" title="Donner 1 étoile">☆</a>
+          </div>
+                    </div>
+
+                </div>
+            </div>
+              <h5> <small id="prjtxt2"><strong> User type</strong></small></h5>
+              <h5> <small id="prjtxt3"><strong> 13 hour ago</strong></small></h5>
+            </div>
+            </div>
+</div>
+          @endif
           @endeach
+          @else
+            <h1>No notifications yet</h1>
+          @endif
   <!-- hna les pubs adroite -->
 
   <div id="pubbb" class="col-md-2">

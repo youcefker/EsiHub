@@ -13,82 +13,14 @@
     <title>{{pageTitle}} </title>
 </head>
 <body>
-    <!-- nav bar -->
-    <header>
-
-        <nav  class="navbar navbar-expand-lg navbar-dark    ">
-          <a class="navbar-brand " href="#">Navbar</a>
-          <button onclick="openNav()" id="menuphone" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <div id="rolling_bar">
-                <input class="colortypingg" type="text" id="txxt"  placeholder="search developer or project">
-                  <a href="#" id="bbtn">
-                    <h3><strong>|</strong></h3><i class="fas fa-search"></i>
-                  </a>
-
-            </div>
-
-            <ul class="navbar-nav mr-auto">
-              <li id="margli" class="nav-item">
-              </li>
-            </ul>
-
-            <ul id="margul1" class="navbar-nav mr-auto">
-              <li id="margli" class="nav-item active">
-                <a class="nav-link" href="/projects"><strong>Home</strong> <span class="sr-only">(current)</span></a>
-              </li>
-              <li id="margli" class="nav-item active">
-                <a class="nav-link" href="#"><strong>Messages</strong> <span class="sr-only">(current)</span></a>
-              </li>
-              <li id="margli" class="nav-item active">
-                <a class="nav-link" href="/notifications"><strong>Notifications</strong> <span class="sr-only">(current)</span></a>
-              </li>
-              <li id="margli" class="nav-item active">
-                <a class="nav-link" href="/me"><strong>Profile</strong> <span class="sr-only">(current)</span></a>
-              </li>
-            </ul>
-
-            <ul id="margul2" class="navbar-nav mr-auto">
-
-              <li id="margli2" class="nav-item">
-                <img class="nav-link" href="#" id="imgbuff" src="/img/icon_buffer-512.png" alt="icon_buffer-512.png">
-              </li>
-              <li id="margli22" class="nav-item">
-                <a class="nav-link" href="/search"><strong>projects &</br>developers</strong>  </a>
-              </li>
-
-            </ul>
-
-          </div>
-
-        </nav>
-        <div id="mobile__menu" class="overlay">
-            <a class="close" onclick="closeNav()">&times;</a>
-            <div class="overlay__content">
-                <a href="#">home</a>
-                <a href="#">Messages</a>
-                <a href="/notifications">Notifications</a>
-                <a href="#">Profile</a>
-                <div id="rolling_bar">
-                  <input class="colortypingg" type="text" id="txxt"  placeholder="search developer or project">
-                  <a href="#" id="bbtn">
-                    <h3><strong>|</strong></h3><i class="fas fa-search"></i>
-                  </a>
-
-                </div>
-            </div>
-        </div>
-        </header>
-    <!-- end nav bar -->
+    @include('includes.nav')
     <div class="grid">
     @each(project in projs)
     <article id="card" class="card">
         <div class="card-head">
-            <img src="img/profile.jpg">
+        <img src="{{project.userAvatar}}">
             <ul>
-                <li class="name">Ait Abdelkaoui karina</li>
+            <li class="name">{{project.projectUser}}</li>
                 <li class="type">{{project.projectType}} </li>
             </ul>
         </div>
@@ -111,11 +43,11 @@
                <li><button onclick="addLike(this)" class="btn btn-link"><i class="fa fa-thumbs-up" aria-hidden="true" style="font-size:150%;"></i></button></li>
            <li><a href='/add-comment/{{project.id}}'>Comment</a></li>
                <li class="ratting-wrapper">
-                   <input type="radio" name="rating" id="star-1" value="1" onclick="addRating()"><label for="star-1"></label>
-                   <input type="radio" name="rating" id="star-2" value="2" onclick="addRating()"><label for="star-2"></label>
-                   <input type="radio" name="rating" id="star-3" value="3" onclick="addRating()"><label for="star-3"></label>
-                   <input type="radio" name="rating" id="star-4" value="4" onclick="addRating()"><label for="star-4"></label>
-                   <input type="radio" name="rating" id="star-5" value="5" onclick="addRating()"><label for="star-5"></label>
+                   <input type="radio" name="rating" id="star-1" value="5" onclick="addRating(this)"><label for="star-1"></label>
+                   <input type="radio" name="rating" id="star-2" value="4" onclick="addRating(this)"><label for="star-2"></label>
+                   <input type="radio" name="rating" id="star-3" value="3" onclick="addRating(this)"><label for="star-3"></label>
+                   <input type="radio" name="rating" id="star-4" value="2" onclick="addRating(this)"><label for="star-4"></label>
+                   <input type="radio" name="rating" id="star-5" value="1" onclick="addRating(this)"><label for="star-5"></label>
                </li>
                <li  class="left"><a href='/projects/{{project.id}}'>Details</a></li>
            </ul>

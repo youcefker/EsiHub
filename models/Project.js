@@ -21,7 +21,7 @@ const Project = sequelize.define('project', {
     imagePath: {
         type: Sequelize.STRING
     },
-    filespath: {
+    videoPath: {
         type: Sequelize.STRING
     },
     likesNumber: {
@@ -32,6 +32,12 @@ const Project = sequelize.define('project', {
     },
     numberOfRaters: {
         type: Sequelize.INTEGER
+    },
+    projectUser: {
+        type: Sequelize.STRING
+    },
+    userAvatar: {
+        type: Sequelize.STRING
     }
     
 });

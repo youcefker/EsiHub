@@ -12,8 +12,10 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="/css/add-comment.css">
+    <link rel="stylesheet" type="text/css" href="/css/nav.css">
 </head>
 <body>
+    @include('includes.nav')
     <div class="card">
       <!--la partie header de la page-->
       <div class="msg-header">
@@ -34,7 +36,7 @@
                         @each(comment in commentNotifications)
                         <div class="received-chats">
                             <div class="received-chats-img">
-                                <img src="/img/user1.jpg">
+                            <img src="{{comment.notifierAvatar}}">
                             </div>
                             <div class="received-msg">
                                 <div class="received-msg-inbox">

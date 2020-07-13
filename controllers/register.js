@@ -116,7 +116,7 @@ exports.registerComplete = async (req , res)=>{
     const url = path.resolve(__dirname , '../public/users/avatars'  ,user.userName+'-'+user.id+'.jpeg')
     const avatarUrl = '/users/avatars/' + user.userName + '-' +user.id + '.jpeg'
     console.log(avatarUrl)
-    image.mv(url,async (req , res)=>{
+    image.mv(url,(err)=>{
         
         // ocject used to update
         const newUser ={
@@ -127,7 +127,9 @@ exports.registerComplete = async (req , res)=>{
             phone :phone,
         }
          //update user 
-         Users.update(newUser , {where : {id : id}}).then((up)=>console.log(up))
+         Users.update(newUser , {where : {id : id}}).then((up)=>{
+             res.redirect('/projects')
+         })
          
      })
 

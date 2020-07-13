@@ -1,6 +1,7 @@
 const Sequelize = require('sequelize')
 
-const sequelize = require('../config/database')
+const sequelize = require('../config/database');
+const { STRING } = require('sequelize');
 
 const Notification = sequelize.define('notification', {
     id: {
@@ -12,7 +13,13 @@ const Notification = sequelize.define('notification', {
     content: {
         type: Sequelize.STRING
     },
+    notifier: {
+        type: Sequelize.STRING
+    },
     notifierId: {
+        type: Sequelize.STRING
+    },
+    notifierAvatar: {
         type: Sequelize.STRING
     },
     type: {
@@ -20,6 +27,9 @@ const Notification = sequelize.define('notification', {
     },
     date: {
         type: Sequelize.DATE
+    },
+    projectUser: {
+        type: Sequelize.STRING
     }
 });
 

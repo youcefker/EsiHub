@@ -20,22 +20,51 @@ exports.postAddProject = (req, res, next) => {
     const title = req.body.title
     const projectType = req.body.projectType
     const description = req.body.description
-    const projectImage = req.file
-
-    if (!projectImage) {
+    const projectImage = req.files.image
+    const projectvideo = req.files.video
+    const url = path.resolve(__dirname , '../public/projectsFiles/', req.session.id + '-' + title + '.jpeg')
+    const imageUrl = '/projectsFiles/' + req.session.id + '-' + title + '.jpeg'
+    const url1 = path.resolve(__dirname , '../public/projectsFiles/', req.session.id + '-videoOf' + title + '.mp4')
+    const videoUrl = '/projectsFiles/' + req.session.id + '-videoOf' + title + '.mp4'
+    console.log(projectvideo)
+    projectImage.mv(url,(err) => {
+      if (err) {
         return res.status(422).render('project/add-project', {
           pageTitle: 'Add Your New Project!',
           path: '/add-project',
           project: {
             title: title,
             projectType: projectType,
-            description: description,
-            likesNumber: 0
+            description: description
           },
           errorMessage: 'Attached file is not an image.',
           validationErrors: []
         });
+      } else {
+        console.log('image uploaded successfully')
       }
+      
+    })
+
+    projectvideo.mv(url1,(err) => {
+      console.log(err)
+      if (err) {
+        return res.status(422).render('project/add-project', {
+          pageTitle: 'Add Your New Project!',
+          path: '/add-project',
+          project: {
+            title: title,
+            projectType: projectType,
+            description: description
+          },
+          errorMessage: 'Attached file is not a video.',
+          validationErrors: []
+        });
+      } else {
+        console.log('video uploaded successfully')
+      }
+      
+    })
       
       let errors = []
      errors = validationResult(req)
@@ -54,10 +83,6 @@ exports.postAddProject = (req, res, next) => {
           validationErrors: errors.array()
         });
       }
-    const imagePath = projectImage.path.split("\\")
-    imagePath.shift()
-    imageUrl = imagePath.join('/')
-    console.log(req.session._id)
     User.findByPk(req.session._id)
     .then(user => {
       if (!user) {
@@ -68,9 +93,12 @@ exports.postAddProject = (req, res, next) => {
         projectType: projectType,
         description: description,
         imagePath: imageUrl,
+        videoPath: videoUrl,
         likesNumber:0,
         rating: 0,
-        numberOfRaters: 0
+        numberOfRaters: 0,
+        projectUser: user.userName,
+        userAvatar: user.avatar
     })
     .then(result => {
         console.log('project created successfully')
@@ -85,8 +113,21 @@ exports.postAddProject = (req, res, next) => {
 }
 
 exports.getProjects = (req, res, nexy) => {
+      const compare = (a,b) => {
+          const ratingA = a.rating / a.numberOfRaters
+          const ratingB = b.rating / b.numberOfRaters
+          let comparison = 0
+          if(ratingA > ratingB) {
+            comparison = 1
+          } else if (ratingA < ratingB) {
+            comparison = -1
+          }
+          return comparison
+      }
       Project.findAll()
       .then(projects => {
+        projects.sort(compare)
+        console.log(projects)
         res.render('project/projects-list', {
             projs: projects,
             pageTitle: 'All Projets',

@@ -23,9 +23,8 @@
     <meta name="description" content="Ela Admin - HTML5 Admin Template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/nav.css">
     <link rel="stylesheet" href="/css/addprojet.css">
-
+    <link rel="stylesheet" type="text/css" href="/css/nav.css">
 
 
     <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script> -->
@@ -34,85 +33,7 @@
 </head>
 
 <body>
-
-<!-- Navbar -->
-  <header>
-
-      <nav  class="navbar navbar-expand-lg navbar-dark    ">
-        <a class="navbar-brand " href="#">Navbar</a>
-        <button onclick="openNav()" id="menuphone" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <div id="rolling_bar">
-              <input class="colortypingg" type="text" id="txxt"  placeholder="search developer or project">
-                <a href="#" id="bbtn">
-                  <h3><strong>|</strong></h3><i class="fas fa-search"></i>
-                </a>
-
-          </div>
-
-          <ul class="navbar-nav mr-auto">
-            <li id="margli" class="nav-item">
-            </li>
-          </ul>
-
-          <ul id="margul1" class="navbar-nav mr-auto">
-            <li id="margli" class="nav-item active">
-              <a class="nav-link" href="/projects"><strong>Home</strong> <span class="sr-only">(current)</span></a>
-            </li>
-            <li id="margli" class="nav-item active">
-              <a class="nav-link" href="#"><strong>Messages</strong> <span class="sr-only">(current)</span></a>
-            </li>
-            <li id="margli" class="nav-item active">
-              <a class="nav-link" href="/notifications"><strong>Notifications</strong> <span class="sr-only">(current)</span></a>
-            </li>
-            <li id="margli" class="nav-item active">
-              <a class="nav-link" href="/me"><strong>Profile</strong> <span class="sr-only">(current)</span></a>
-            </li>
-          </ul>
-
-          <ul id="margul2" class="navbar-nav mr-auto">
-
-            <li id="margli2" class="nav-item">
-              <img class="nav-link" href="#" id="imgbuff" src="/img/icon_buffer-512.png" alt="icon_buffer-512.png">
-            </li>
-            <li id="margli22" class="nav-item">
-              <a class="nav-link" href="/search"><strong>projects &</br>developers</strong>  </a>
-            </li>
-
-          </ul>
-
-        </div>
-
-      </nav>
-
-
-
-              <div id="mobile__menu" class="overlay">
-                  <a class="close" onclick="closeNav()">&times;</a>
-                  <div class="overlay__content">
-                      <a href="#">home</a>
-                      <a href="#">Messages</a>
-                      <a href="/notifications">Notifications</a>
-                      <a href="#">Profile</a>
-                      <div id="rolling_bar">
-                        <input class="colortypingg" type="text" id="txxt"  placeholder="search developer or project">
-                        <a href="#" id="bbtn">
-                          <h3><strong>|</strong></h3><i class="fas fa-search"></i>
-                        </a>
-
-                      </div>
-                  </div>
-              </div>
-              </header>
-    <!--end nav barre -->
-
-
-
-
-
-
+@include('includes.nav')
 <!-- hna nstf les cards hdok  -->
 
 @if(errorMessage)
@@ -224,7 +145,7 @@
                 <div class="custom-file">
                 <i id="cam" class="fas fa-camera"></i>
                 <img id="blah2" src="#" alt="" />
-                <input type="file" id="imgInp" name="files" multiple>
+                <input type="file" id="imgInp" name="video">
                 <i href="#" class=''></i>
                 </div>
 

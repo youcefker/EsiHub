@@ -43,30 +43,6 @@ require('./config/passport')(passport)
 // settingUp middlewares
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({extended: true}));
-// multer set up 
-const fileStorage = multer.diskStorage({
-  destination: (req, file, cb) => {
-    cb(null, './public/projectImages/');
-  },
-  filename: (req, file, cb) => {
-    cb(null,file.originalname );
-  }
-}) 
-
-const fileFilter = (req, file, cb) => {
-  if (
-    file.mimetype === 'image/png' ||
-    file.mimetype === 'image/jpg' ||
-    file.mimetype === 'image/jpeg'
-  ) {
-    cb(null, true);
-  } else {
-    cb(null, false);
-  }
-};
-
-app.use(multer({storage:fileStorage, fileFilter: fileFilter}).single('image'))
-
 
 app.use(expressValidator())
 app.use(fileUpload());
@@ -80,8 +56,10 @@ app.use(expressSession({
   saveUninitialized: true,
   resave:true
 }))
+
 //passport stup
 app.use(passport.initialize());
+app.use(passport.session());
 
 //flash setup
 app.use(connectFlash())
@@ -93,11 +71,14 @@ app.use((req , res  , next )=>{
   next()
 
 })
+
+//database associations
 Project.hasMany(Notification)
 Notification.belongsTo(Project, { constraints: true, onDelete: 'CASCADE' })
 
-User.hasMany(Project)
-Project.belongsTo(User, { constraints: true, onDelete: 'CASCADE' });
+User.belongsToMany(Project, { through: 'User_Projects' })
+Project.belongsToMany(User, { through: 'User_Projects' });
+
 
 //controllers
 const homeRedirect = require('./controllers/homePage')
@@ -132,19 +113,16 @@ app.post('/updateMe' ,profileController.updateProfile)
 
 app.get('/add-project', projectController.getAddProject)
 
-/*[body('title').isString()
+app.post('/add-project',[body('title').isString()
 .isLength({min: 3})
 .trim(),
 body('description').isString()
 .isLength({min:5, max:400})
-.trim()]
-*/
+.trim()], projectController.postAddProject)
 
-app.post('/add-project',  projectController.postAddProject)
+app.get('/projects', projectController.getProjects)
 
-app.get('/projects', isAuth, projectController.getProjects)
-
-app.get('/projects/:projectId', isAuth, projectController.getProject)
+app.get('/projects/:projectId',  projectController.getProject)
 
 //search 
 app.get('/search', searchController.getSearch)

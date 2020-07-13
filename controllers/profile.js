@@ -18,7 +18,8 @@ exports.myProfile = async(req, res) => {
                 github : user.gitHub,
                 bio : user.bio
             },
-            projects : projects
+            projs : projects,
+            projectsNumber: projects.length
         })
     })
     .catch(err => {
