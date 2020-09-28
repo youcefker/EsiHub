@@ -80,10 +80,11 @@
                    <div id="bt" class="col-10">
                    <a href="/projects/{{project.id}}"><button type="button" class="btn btn-light">view project</button></a>
                    </div>
+                   <form action="/admin/{{project.id}}" method="POST">
                 <div class="col-1">
-                  <i id="delet2" class="fa fa-trash" aria-hidden="true"></i>
+                <button type="submit"><i id="delet2" class="fa fa-trash" aria-hidden="true"></i></button>
                 </div>
-
+                   </form>
                   </div>
             </article>
         </div>
@@ -100,7 +101,7 @@
               <div class="card-body">
                 <div class="row">
                 <div id="mmg" class="col-1">
-                <img src="{{user.avatar}}" class="float-left rounded-circle">
+                <img id="mmg4" src="{{user.avatar}}" class="float-left rounded-circle">
                 </div>
                 <div class="col-9">
                 <div class="message">
@@ -108,9 +109,11 @@
                 <p class="card-text">{{user.bio}}</p>
                 </div>
               </div>
+            <form action="/admin/{{user.id}}" method="POST">
               <div class="col-2">
-              <a href="/projects/{{project.id}}"><i id="delet" class="fa fa-trash" aria-hidden="true"></i><a>
+              <button type="submit"><i id="delet" class="fa fa-trash" aria-hidden="true"></i></button>
               </div>
+              </form>
             </div>
               </div>
               </div>

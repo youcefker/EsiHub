@@ -151,6 +151,8 @@ app.post('/add-rating/:info', notificationController.addRating)
 
 app.get('/admin', adminController.adminLogIn)
 
+app.post('/admin/:info', adminController.delete)
+
 
 //server
 

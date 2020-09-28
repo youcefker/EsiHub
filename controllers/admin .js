@@ -15,6 +15,21 @@ exports.adminLogIn = (req,res,next) => {
     console.log(err)
   })
 }
-/*exports.deleteProject = (req,res,next) => {
-  const projectId = 
-}*/
+exports.delete = (req,res,next) => {
+  const info = req.params.info
+  Project.findByPk(info)
+  .then(project => {
+    if(project){
+      return Project.destroy({where: {id: info}}).then(result => {
+        res.redirect('/admin')
+      })
+    }else {
+       return User.destroy({where: {id: info}}).then(result => {
+        res.redirect('/admin')
+      })
+    }
+  })
+  .catch(err => {
+    console.log(err)
+  })
+}

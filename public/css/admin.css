@@ -4,7 +4,9 @@
   display: none;
 }
 
-
+#mmg4 {
+  width: 50px;
+}
 
 @media (max-width: 768px) {
     .carousel-inner .carousel-item > div {
