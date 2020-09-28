@@ -85,6 +85,7 @@ const homeRedirect = require('./controllers/homePage')
 const registerController = require('./controllers/register')
 const loginController = require('./controllers/login')
 const profileController = require('./controllers/profile')
+const adminController = require('./controllers/admin ')
 
 //projectControllers
 
@@ -99,6 +100,9 @@ const searchController = require('./controllers/search')
 
 const notificationController = require('./controllers/notification')
 
+const searchFromHome = require("./controllers/searchFromHome");
+const { get } = require('jquery');
+
 //routes
 app.get('/', homeRedirect)
 app.post('/auth/register' , registerController.register)
@@ -106,7 +110,7 @@ app.post('/auth/completeRegister' , registerController.registerComplete)
 app.post('/auth/login' ,loginController.loginController)
 app.get('/me' ,profileController.myProfile)
 app.post('/updateMe' ,profileController.updateProfile)
-
+app.get('/profile/:id' , profileController.getProfile)
 
 
 //projectRoutes
@@ -125,9 +129,13 @@ app.get('/projects', projectController.getProjects)
 app.get('/projects/:projectId',  projectController.getProject)
 
 //search 
-app.get('/search', searchController.getSearch)
+app.get('/connectedSearch', searchController.getSearch)
 
-app.post('/searchProject', searchController.postSearch)
+app.post('/searchProject', searchController.postSearchProject)
+
+app.post('/searchUser', searchController.postSearchUser)
+
+app.get('/search/:type', searchFromHome.getSearchFromHome)
 
 //Notifications
 
@@ -141,6 +149,7 @@ app.post('/add-like/:projectId', notificationController.addLike)
 
 app.post('/add-rating/:info', notificationController.addRating)
 
+app.get('/admin', adminController.adminLogIn)
 
 
 //server

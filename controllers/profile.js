@@ -16,7 +16,8 @@ exports.myProfile = async(req, res) => {
                 facebook : user.fb ,
                 linkedin : user.linkedIn,
                 github : user.gitHub,
-                bio : user.bio
+                bio : user.bio,
+                skills: JSON.parse(user.skills)
             },
             projs : projects,
             projectsNumber: projects.length
@@ -52,4 +53,38 @@ exports.updateProfile = (req , res)=>{
     
 }} ).then(console.log('userrrrrrrr'))
     res.redirect('/me')
+    }
+
+    exports.updateSkills = (req , res)=>{
+        const id = req.session._id
+        const skills = req.body.skills
+        console.log(id)
+        console.log(skills)
+        User.update(
+            {skills} ,
+            {where :{id : id}} )
+            .then(user => console.log(user.skills) )
+            res.redirect('/me')
+
+    }
+
+    exports.getProfile = async(req , res) =>{
+        console.log(req)
+        //if requested profile is myprofile
+        // if (req.session._id == req.params.id) return redirect('/me')
+        //if requested profile isn't mine
+        const id = req.params.id
+        const user = await User.findOne({where : {id : id}})
+    
+        res.render('myProfile',{
+            profile : {
+                name : user.userName,
+                avatar : user.avatar,
+                facebook : user.fb ,
+                linkedin : user.linkedIn,
+                github : user.gitHub,
+                bio : user.bio,
+                skills : JSON.parse(user.skills)
+            },
+        })
     }

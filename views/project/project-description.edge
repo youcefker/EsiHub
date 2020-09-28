@@ -14,11 +14,12 @@
   <title>{{pageTitle}} </title>
 </head>
 <body>
-<div class="card m-sm-1 m-md-2 m-lg-3">
+
     <!-- Navbar -->
 
   <!--end nav barre -->
-    <main>
+  @include('includes.nav')
+    
       @if(project)
       <div class="row align-item-center">
          <div class="col-xl-4">
@@ -28,10 +29,9 @@
               <h5>{{project.projectType}}</h5>
               </div>
               <div class="box2">
-                  <img id="mggg" src="/img/user.png" width="350px" height="150px" style="margin-right: auto;margin-left: auto;">
+              <img id="mggg" src="{{user.avatar}}" width="350px" height="150px" style="margin-right: auto;margin-left: auto;">
               <h3>{{user.userName}}</h3>
-                  <h5>Co-Founder & CTO</h5>
-                  <p class="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do elusmod tempor incididunt ut-ero</p>
+              <p class="p1">{{user.bio}}</p>
                  <div class="btn">
                     <ul>
                       <li><a href="#" class="btn btn-primary btn-sm">Contact</a></li>
@@ -65,8 +65,7 @@
       @else
       <h2>this project not found</h2>
       @endif
-    </main>
-</div>
+
 
 
   <script type="text/javascript" src="/js/projectDescription.js"></script>
@@ -78,15 +77,3 @@
 
 </body>
 </html>
-© 2020 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About

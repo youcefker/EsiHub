@@ -143,12 +143,12 @@ exports.getProject = (req, res, next) => {
     projectId = req.params.projectId
     Project.findByPk(projectId)
     .then(project => {
-        User.findByPk(project.userId).then(user => {
+        project.getUsers().then(users => {
           res.render('project/project-description', {
             pageTitle: project.title,
             path: '/projects',
             project: project,
-            user: user
+            user: users[0]
         })
         })
         
