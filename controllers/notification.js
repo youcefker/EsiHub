@@ -5,6 +5,7 @@ const Project = require('../models/Project')
 const Notification = require('../models/Notification')
 
 const sequelize = require('sequelize')
+const Pub = require('../models/Pub')
 
 const Op = sequelize.Op
 
@@ -18,9 +19,12 @@ exports.getNotify = (req, res, next) => {
         projectUser: id
     }})
     .then(notifications => {
-        res.render('project/notification', {
-            path:'/notifications',
-            notifications: notifications
+        return Pub.findAll({where:{added: true}}).then(pubs => {
+            res.render('project/notification', {
+                path:'/notifications',
+                notifications: notifications,
+                pubs: pubs
+            })
         })
         })
     .catch(err => {

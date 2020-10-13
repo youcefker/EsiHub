@@ -1,14 +1,23 @@
 const User = require('../models/Users')
 const Project = require('../models/Project')
+const Pub = require('../models/Pub')
 
 exports.adminLogIn = (req,res,next) => {
   User.findAll()
   .then(users => {
     return Project.findAll()
     .then(projects => {
-      res.render('admin',{
-        projects: projects,
-        users: users
+      return Pub.findAll({where: {added: false}})
+      .then(notAddedPubs => {
+        return Pub.findAll({where: {added: true}})
+        .then(addedPubs => {
+          res.render('admin',{
+            projects: projects,
+            users: users,
+            addedPubs: addedPubs,
+            notAddedPubs: notAddedPubs
+          })
+        })
       })
     })
   }).catch(err => {

@@ -132,79 +132,23 @@
     <div class="row mx-auto my-auto">
         <div id="recipeCarousel" class="carousel slide w-100" data-ride="carousel">
             <div class="carousel-inner w-100" role="listbox">
+            @each(pub in addedPubs)
+            <form method="POST" action="/delete/{{pub.id}}">
                 <div class="carousel-item active">
                     <div class="col-md-4">
                         <div class="card card-body">
-                            <img class="img-fluid" src="http://placehold.it/380?text=1">
+                        <img class="img-fluid" src="{{pub.imagePath}}">
                             <div class="row">
                             <div class="col">
-                              <i class="fa fa-trash-o" aria-hidden="true"></i>
+                              <button class="btn btn-link" type="submit"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
                             </div>
                               </div>
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item">
-                    <div class="col-md-4">
-                        <div class="card card-body">
-                            <img class="img-fluid" src="http://placehold.it/380?text=2">
-                            <div class="row">
-                            <div class="col">
-                              <i class="fa fa-trash-o" aria-hidden="true"></i>
-                            </div>
-                              </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="col-md-4">
-                        <div class="card card-body">
-                            <img class="img-fluid" src="http://placehold.it/380?text=3">
-                            <div class="row">
-                            <div class="col">
-                              <i class="fa fa-trash-o" aria-hidden="true"></i>
-                            </div>
-                              </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="col-md-4">
-                        <div class="card card-body">
-                            <img class="img-fluid" src="http://placehold.it/380?text=4">
-                            <div class="row">
-                            <div class="col">
-                              <i class="fa fa-trash-o" aria-hidden="true"></i>
-                            </div>
-                              </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="col-md-4">
-                        <div class="card card-body">
-                            <img class="img-fluid" src="http://placehold.it/380?text=5">
-                            <div class="row">
-                            <div class="col">
-                              <i class="fa fa-trash-o" aria-hidden="true"></i>
-                            </div>
-                              </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="col-md-4">
-                        <div class="card card-body">
-                            <img class="img-fluid" src="http://placehold.it/380?text=6">
-                            <div class="row">
-                            <div class="col">
-                              <i class="fa fa-trash-o" aria-hidden="true"></i>
-                            </div>
-                              </div>
-                        </div>
-                    </div>
-                </div>
+              </form>
             </div>
+            @endeach
             <a class="carousel-control-prev w-auto" href="#recipeCarousel" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon bg-dark border border-dark rounded-circle" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
@@ -226,73 +170,25 @@
           <div class="row justify-content-center">
 <div class="col-md-8">
     <div class="row">
-        <a href="https://unsplash.it/1200/768.jpg?image=251" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+      @each(pub in notAddedPubs)
+      <a href="https://unsplash.it/1200/768.jpg?image=251" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
             <div id="pb" class="card">
-              <img src="https://unsplash.it/600.jpg?image=251" class="img-fluid">
+            <img src="{{pub.imagePath}}" class="img-fluid">
               <div class="row">
+              <form method="POST" action="/accept/{{pub.id}}">
               <div class="col-10">
-                <i class="fa fa-plus" aria-hidden="true"></i>
+                <button type="submit"><i class="fa fa-plus" aria-hidden="true"></i></button>
               </div>
+            </form>
+            <form method="POST" action="/delete/{{pub.id}}">
               <div class="col">
-                <i class="fa fa-trash-o" aria-hidden="true"></i>
+                <button type="submit"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
               </div>
+            </form>
                 </div>
             </div>
-        </a>
-
-
-        <a href="https://unsplash.it/1200/768.jpg?image=255" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
-            <div id="pb" class="card">
-              <img src="https://unsplash.it/600.jpg?image=255" class="img-fluid">
-              <div class="row">
-              <div class="col-10">
-                <i class="fa fa-plus" aria-hidden="true"></i>
-              </div>
-              <div class="col">
-                <i class="fa fa-trash-o" aria-hidden="true"></i>
-              </div>
-                </div>
-            </div>
-        </a>
-          <a href="https://unsplash.it/1200/768.jpg?image=254" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
-            <div id="pb" class="card">
-                <img src="https://unsplash.it/600.jpg?image=254" class="img-fluid">
-              <div class="row">
-              <div class="col-10">
-                <i class="fa fa-plus" aria-hidden="true"></i>
-              </div>
-              <div class="col">
-                <i class="fa fa-trash-o" aria-hidden="true"></i>
-              </div>
-                </div>
-            </div>
-        </a>
-            <a href="https://unsplash.it/1200/768.jpg?image=253" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
-            <div id="pb" class="card">
-              <img src="https://unsplash.it/600.jpg?image=253" class="img-fluid">
-              <div class="row">
-              <div class="col-10">
-                <i class="fa fa-plus" aria-hidden="true"></i>
-              </div>
-              <div class="col">
-                <i class="fa fa-trash-o" aria-hidden="true"></i>
-              </div>
-                </div>
-            </div>
-        </a>
-          <a href="https://unsplash.it/1200/768.jpg?image=252" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
-            <div id="pb" class="card">
-              <img src="https://unsplash.it/600.jpg?image=252" class="img-fluid">
-              <div class="row">
-              <div class="col-10">
-                <i class="fa fa-plus" aria-hidden="true"></i>
-              </div>
-              <div class="col">
-                <i class="fa fa-trash-o" aria-hidden="true"></i>
-              </div>
-                </div>
-            </div>
-        </a>
+      </a>
+      @endeach
 
 
     </div>

@@ -26,6 +26,7 @@
 <div class="content">
   <div class="row">
   <!-- cote gauche  tae add event  -->
+  <form method="POST" action="/addPub" enctype="multipart/form-data">
   <div id="shr" class="col-md-3">
     <div class="row">
       <div id="pub1111" class="card">
@@ -34,7 +35,7 @@
                 <div id="share" class="btn btn-success">
 							           <strong>share us</strong>
     <!-- input file -->
-							       <input id="inputt" type="file" name="file"/>
+							       <input id="inputt" type="file" name="pub"/>
 						     </div>
               <img id="pu"  src="/img/photo_2020-06-13_04-06-52.jpg" alt="">
           </div>
@@ -44,14 +45,11 @@
       </br></br></br></br>
       you know a new hackathon or useful event?
       </div>
-       <div id="share" class="btn btn-success">
-							           <strong>Send it  to admin</strong>
-    <!-- input file -->
-							       <input id="inputt" type="file" name="file"/>
-						     </div>
+					 <button id="share" class="btn btn-success" type="submit"> <strong>Send it  to admin</strong></button>
+
     </div>
   </div>
-
+</form>
 
 
     <div class="col-md-7">
@@ -126,40 +124,16 @@
   <!-- hna les pubs adroite -->
 
   <div id="pubbb" class="col-md-2">
+    @each(pub in pubs)
      <div class="row">
        <div class="card">
            <div id="pub11"  class="card-body">
-               <img   src="/img/93052335_323808895254557_548217610005643264_n.jpg" alt="">
+           <img   src="{{pub.imagePath}}" alt="">
 
            </div>
        </div>
      </div>
-
-     <div class="row">
-       <div class="card">
-           <div id="pub11" class="card-body">
-             <img   src="/img/92738417_500278707517027_9190470847905660928_n.jpg" alt="">
-
-           </div>
-       </div>
-     </div>
-     <div class="row">
-       <div class="card">
-           <div id="pub11" class="card-body">
-             <img   src="/img/92728715_247387743066197_1109854106593263616_n.jpg" alt="">
-
-           </div>
-       </div>
-     </div>
-     <div class="row">
-       <div class="card">
-           <div id="pub11" class="card-body">
-                <img   src="/img/92226362_698728877620545_3772096491326275584_n.jpg" alt="">
-
-           </div>
-       </div>
-     </div>
-
+     @endeach
   </div>
 
 </div>

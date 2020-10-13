@@ -2,6 +2,7 @@ const User = require("../models/Users");
 const Project = require('../models/Project')
 const db = require("../config/database");
 const path = require('path')
+const Pub = require('../models/Pub')
 
 exports.myProfile = async(req, res) => {
     const id = req.session._id
@@ -9,19 +10,24 @@ exports.myProfile = async(req, res) => {
     const user = await User.findOne({where : {id : id}})
     user.getProjects()
     .then(projects => {
-        res.render('myProfile',{
-            profile : {
-                name : user.userName,
-                avatar : user.avatar,
-                facebook : user.fb ,
-                linkedin : user.linkedIn,
-                github : user.gitHub,
-                bio : user.bio,
-                skills: JSON.parse(user.skills)
-            },
-            projs : projects,
-            projectsNumber: projects.length
+        return Pub.findAll({where:{added: true}}).then(pubs => {
+            res.render('myProfile',{
+                profile : {
+                    name : user.userName,
+                    avatar : user.avatar,
+                    facebook : user.fb ,
+                    linkedin : user.linkedIn,
+                    github : user.gitHub,
+                    bio : user.bio,
+                    skills: JSON.parse(user.skills),
+                    
+                },
+                projs : projects,
+                projectsNumber: projects.length,
+                pubs: pubs
+            })
         })
+        
     })
     .catch(err => {
         console.log(err)

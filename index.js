@@ -86,6 +86,7 @@ const registerController = require('./controllers/register')
 const loginController = require('./controllers/login')
 const profileController = require('./controllers/profile')
 const adminController = require('./controllers/admin ')
+const pubController = require('./controllers/pub')
 
 //projectControllers
 
@@ -156,6 +157,11 @@ app.post('/add-rating/:info', notificationController.addRating)
 app.get('/admin', adminController.adminLogIn)
 
 app.post('/admin/:info', adminController.delete)
+
+app.post('/addPub',pubController.postPub)
+
+app.post('/delete/:pub', pubController.deletePub)
+app.post('/accept/:pub', pubController.acceptPub)
 
 
 //server
