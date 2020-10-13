@@ -52,3 +52,9 @@ exports.loginController = async (req,res)=>{
         })
     }
 }
+
+exports.logoutController = async (req,res)=>{
+    req.session.destroy(()=>{
+        res.redirect('/')
+    })
+}

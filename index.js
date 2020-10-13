@@ -108,9 +108,13 @@ app.get('/', homeRedirect)
 app.post('/auth/register' , registerController.register)
 app.post('/auth/completeRegister' , registerController.registerComplete)
 app.post('/auth/login' ,loginController.loginController)
+app.get('/auth/logout' ,loginController.logoutController)
+
 app.get('/me' ,profileController.myProfile)
+app.post('/me/updateSkills' , profileController.updateSkills)
 app.post('/updateMe' ,profileController.updateProfile)
 app.get('/profile/:id' , profileController.getProfile)
+
 
 
 //projectRoutes

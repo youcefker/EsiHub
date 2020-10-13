@@ -76,7 +76,7 @@ exports.updateProfile = (req , res)=>{
         const id = req.params.id
         const user = await User.findOne({where : {id : id}})
     
-        res.render('myProfile',{
+        res.render('profile',{
             profile : {
                 name : user.userName,
                 avatar : user.avatar,

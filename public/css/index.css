@@ -1,3 +1,16 @@
+.alert {
+  padding: 0px;
+  width: 50%;
+}
+#navv {
+  margin-top: -20px;
+}
+
+#navv img {
+  width: 67%;
+  height: 0%;
+}
+
 .btn-light {
   background: #ffffff;
 }
@@ -13,7 +26,7 @@
 
 #modal-wrapper2 {
   width: 42%;
-  height: 50%;
+  height: 55%;
   margin-top: 0%;
   margin-left: 44%;
   padding: 0px;
