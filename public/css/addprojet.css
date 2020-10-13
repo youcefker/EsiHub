@@ -14,6 +14,9 @@ margin-left: 35px;
   margin-left: 10%;
 
 }
+#cam{
+  margin: auto;
+}
 
 
 
@@ -25,6 +28,7 @@ img {
   .content {
     float: left;
     padding: 1.875em;
+    margin-bottom: 60px;
     width: 100%; }
 
       .card {
@@ -572,6 +576,7 @@ border-color: red;
 
   #vdw{
     position: absolute;
+    margin-left: -30px;;
   
   }
 

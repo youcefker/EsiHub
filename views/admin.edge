@@ -76,7 +76,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
+                <div  class="row">
                    <div id="bt" class="col-10">
                    <a href="/projects/{{project.id}}"><button type="button" class="btn btn-light">view project</button></a>
                    </div>
@@ -96,12 +96,13 @@
         <div id="login">
           @each(user in users)
              <div class="container">
-            <div class="card">
+            <div id='pp' class="card">
               <div class="container">
               <div class="card-body">
                 <div class="row">
                 <div id="mmg" class="col-1">
                 <img id="mmg4" src="{{user.avatar}}" class="float-left rounded-circle">
+                
                 </div>
                 <div class="col-9">
                 <div class="message">
