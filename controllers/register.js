@@ -13,12 +13,23 @@ exports.register = async (req, res) => {
     const firstName = req.body.username;
     const lastName = req.body.username;
     const userName = req.body.username;
-
+    
     // validating the info
     let validationErrors = [];
+    
     req.checkBody("email", "Email is not valid")
         .notEmpty()
         .isEmail();
+        if(!email.endsWith('@esi-sba.dz')){
+            const errorMail = {
+                location :'body',
+                param :'email',
+                msg : 'sorry , you are not an Esi-SBA student',
+                value : email
+            }
+    
+            validationErrors.push(errorMail)
+        }
 
     // if the email is valide
      if (req.validationErrors().length == 1 || !req.validationErrors()) {
